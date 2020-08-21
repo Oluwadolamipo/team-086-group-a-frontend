@@ -1,4 +1,5 @@
 {
+  "homepage": "http://BuildForSDGCohort2.github.io/team-086-group-a-frontend",
   "name": "team_086_group_a_frontend",
   "version": "0.1.0",
   "private": true,
@@ -47,6 +48,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BuildForSDGCohort2/team-086-group-a-frontend/issues"
-  },
-  "homepage": "http://BuildForSDGCohort2.github.io/team-086-group-a-frontend"
+  }
 }
