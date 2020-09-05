@@ -1,3 +1,33 @@
+**Folder Structures src**
+
+**Assest**
+
+where all image files will be.
+
+**Common**
+
+This folder hold all of the common components (reuseable components)
+
+**Components**
+
+This folder will be where all **components** that is reuseable will be created. folder here/file should begin with a capital letter
+
+**Context**
+
+This folder is where all context providers
+
+**Pages**
+
+This folder holds all the project views/pages i:e screens
+
+**Routes**
+
+This folder will hold all the project navigations
+
+**Styles**
+
+This folder will hold all the styling of this project. accepted style in this project is **ccs module** and **scss**.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
