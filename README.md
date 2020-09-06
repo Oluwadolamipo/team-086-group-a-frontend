@@ -2,23 +2,23 @@
 
 **Assest**
 
-where all image files will be.
+This folder is where all image files will be.
 
 **Common**
 
-This folder hold all of the common components (reuseable components)
+This folder holds all of the common components (reuseable components)
 
 **Components**
 
-This folder will be where all **components** that is reuseable will be created. folder here/file should begin with a capital letter
+This folder will be where all **components** that is not reuseable will be created. folders here/files should begin with a capital letter
 
 **Context**
 
-This folder is where all context providers
+This folder is where all context providers will be created
 
 **Pages**
 
-This folder holds all the project views/pages i:e screens
+This folder will holds all the project views/pages i:e screens
 
 **Routes**
 
