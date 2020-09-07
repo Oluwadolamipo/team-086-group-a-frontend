@@ -14,6 +14,7 @@ const Header = () => {
     navWrapper,
     navBars,
     links,
+    buttonWrapper,
     button,
   } = HeaderStyles;
   return (
@@ -34,12 +35,14 @@ const Header = () => {
                 />
               ))}
           </div>
-          <CustomButton
-            text={"Sign Up"}
-            className={button}
-            width={"15vw"}
-            backgroundColor={"#000"}
-          />
+          <div className={buttonWrapper}>
+            <CustomButton
+              text={"Sign Up"}
+              className={button}
+              width={"12vw"}
+              backgroundColor={"#000"}
+            />
+          </div>
         </div>
       </div>
     </div>
