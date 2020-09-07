@@ -1,5 +1,5 @@
 import React from "react";
-import Button_Styles from "./Button.modue.css";
+import ButtonStyles from "./Button.modue.css";
 
 const { button } = ButtonStyles;
 const Button = ({
