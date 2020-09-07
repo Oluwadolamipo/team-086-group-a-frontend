@@ -1,30 +1,30 @@
-**Folder Structures src**
+### Folder Structure
 
-**Assest**
+### Assest
 
 where all image files will be.
 
-**Common**
+### Common
 
 This folder hold all of the common components (reuseable components)
 
-**Components**
+### Components
 
 This folder will be where all **components** that is reuseable will be created. folder here/file should begin with a capital letter
 
-**Context**
+### Context
 
 This folder is where all context providers
 
-**Pages**
+### Pages
 
 This folder holds all the project views/pages i:e screens
 
-**Routes**
+### Routes
 
 This folder will hold all the project navigations
 
-**Styles**
+### Styles
 
 This folder will hold all the styling of this project. accepted style in this project is **ccs module** and **scss**.
 
