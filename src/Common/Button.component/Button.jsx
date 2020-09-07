@@ -1,7 +1,7 @@
 import React from "react";
-import Button_Styles from "./Button.module.css";
+import Button_Styles from "./Button.modue.css";
 
-const { button } = Button_Styles;
+const { button } = ButtonStyles;
 const Button = ({
   name,
   color,
@@ -16,7 +16,7 @@ const Button = ({
   padding,
   border,
   borderRadius,
-  ref
+  ref,
 }) => (
   <div className="button">
     <button
@@ -28,7 +28,7 @@ const Button = ({
         margin: margin ? margin : null,
         padding: padding ? padding : null,
         border: border ? border : null,
-        borderRadius: borderRadius ? borderRadius : null
+        borderRadius: borderRadius ? borderRadius : null,
       }}
       onClick={click ? click : null}
       name={name ? name : null}

@@ -17,11 +17,11 @@ const Image = ({
   padding,
   zIndex,
   id,
-  type
+  type,
 }) => {
-  const { custom_image, custom_image_wrapper } = ImageStyles;
+  const { customImage, customImageWrapper } = ImageStyles;
   return (
-    <div className={custom_image_wrapper}>
+    <div className={customImageWrapper}>
       <img
         style={{
           width: width ? width : null,
@@ -34,11 +34,11 @@ const Image = ({
           bottom: bottom ? bottom : null,
           right: right ? right : null,
           padding: padding ? padding : null,
-          transform: transform ? transform : null
+          transform: transform ? transform : null,
         }}
         src={src}
         alt={alt}
-        className={className ? className : custom_image}
+        className={className ? className : customImage}
         onClick={onclick ? onclick : null}
         id={id ? id : null}
         type={type ? type : null}

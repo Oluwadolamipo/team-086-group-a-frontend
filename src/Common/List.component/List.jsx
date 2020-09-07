@@ -6,9 +6,9 @@ const Lists = ({ className, color, text, paddingTop, marginTop }) => {
     <li
       className={className ? className : list}
       style={{
-        color: color,
+        color: color ? color : "#000",
         paddingTop: paddingTop ? paddingTop : "",
-        marginTop: marginTop ? marginTop : "10px"
+        marginTop: marginTop ? marginTop : "10px",
       }}
     >
       {text}
