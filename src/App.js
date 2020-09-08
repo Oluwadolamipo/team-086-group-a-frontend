@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
-
-import CustomHeader from "./Common/Header.Component/Header";
+import Route from "./Routes/Routes";
 
 function App() {
   return (
     <div>
-      <CustomHeader />
+      <Route />
     </div>
   );
 }
