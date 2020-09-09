@@ -6,6 +6,14 @@ import logoImage from "../../Asset/logo.png";
 import CustomImage from "../Image.component/Image";
 import CustomInput from "../Input.component/Input";
 import CustomButton from "..//Button.component/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopyright } from "@fortawesome/free-solid-svg-icons";
+import {
+  faInstagramSquare,
+  faFacebookSquare,
+  faTwitterSquare,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const {
@@ -15,6 +23,7 @@ const Footer = () => {
     logo,
     shortLinksWrapper,
     quickLinks,
+    listWrapper,
     list,
     listElements,
     openingHours,
@@ -28,6 +37,10 @@ const Footer = () => {
     input,
     button,
     text,
+    bottomSection,
+    copyright,
+    brandslogos,
+    hints,
   } = FooterStyles;
   return (
     <div className={container}>
@@ -39,7 +52,7 @@ const Footer = () => {
           <div className={shortLinksWrapper}>
             <div className={quickLinks}>
               <h3>quick links</h3>
-              <div>
+              <div className={listWrapper}>
                 <ul className={list}>
                   {FooterQuickLinksCollections &&
                     FooterQuickLinksCollections.map((quicklinks, index) => (
@@ -104,9 +117,35 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <span>&copy;</span>
+        <div className={bottomSection}>
+          <div className={copyright}>
+            <span>
+              <FontAwesomeIcon icon={faCopyright} color="#fff" /> 2020
+              ThinkSpiceFood
+            </span>
+          </div>
+          <div className={brandslogos}>
+            <div>
+              <FontAwesomeIcon
+                icon={faInstagramSquare}
+                size="2x"
+                color="#fff"
+              />
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faFacebookSquare} size="2x" color="#fff" />
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faLinkedin} size="2x" color="#fff" />
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faTwitterSquare} size="2x" color="#fff" />
+            </div>
+          </div>
+          <div className={hints}>
+            <span>privacy policy</span>
+            <span>terms of service</span>
+            <span>language</span>
           </div>
         </div>
       </div>

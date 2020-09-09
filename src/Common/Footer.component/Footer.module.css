@@ -24,7 +24,7 @@
   width: 15%;
 }
 .logo img {
-  transform: translateY(5%);
+  transform: translate(-40%, 5%);
   height: 40%;
 }
 
@@ -41,7 +41,9 @@
 .quickLinks h3 {
   color: #fff;
 }
-
+.listWrapper {
+  transform: translateY(20%);
+}
 .list {
   list-style: none;
 }
@@ -62,7 +64,7 @@
 }
 
 .openingHourDetail {
-  transform: translateY(10%);
+  transform: translateY(60%);
   color: #fff;
   line-height: 1.7;
 }
@@ -82,7 +84,7 @@
   align-self: flex-start;
 }
 .contactInfoDetail {
-  transform: translateY(5%);
+  transform: translateY(25%);
   display: grid;
   grid-gap: 20px;
   color: #fff;
@@ -110,6 +112,7 @@ p {
   height: 16.6em;
   display: flex;
   flex-direction: column;
+  transform: translateY(15%);
 }
 
 .formWrapper {
@@ -136,4 +139,41 @@ p {
 
 .text {
   color: #fff;
+  font-weight: lighter;
+}
+
+.bottomSection {
+  width: 100%;
+  height: 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copyright {
+  flex-basis: 30%;
+}
+
+.copyright span {
+  margin-left: 10%;
+  font-weight: lighter;
+  color: #fff;
+  text-transform: uppercase;
+}
+.brandslogos {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 20%;
+}
+
+.hints {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 30%;
+}
+
+.hints span {
+  color: #fff;
+  font-weight: lighter;
+  text-transform: capitalize;
+  margin-right: 6%;
 }
