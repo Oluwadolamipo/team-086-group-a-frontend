@@ -1,15 +1,28 @@
 import React, { useState } from "react";
-const registerContextMembers = React.createContext({}, () => {});
 
-const RegisteredMemberContext = (props) => {
-  const [registeredMemberScreens, setRegisteredMemberScreens] = useState({});
+const RegisterContextMembers = React.createContext([{}, () => {}]);
+
+const RegisteredMemberContextProvider = (props) => {
+  const [registeredMemberScreens, setRegisteredMemberScreens] = useState({
+    formValue: {
+      fullName: "",
+      email: "",
+      phoneNumber: "",
+      password: "",
+      confirmPassword: "",
+      formData: [],
+    },
+    collection: null,
+  });
+
   return (
-    <registerContextMembers.provider
+    <RegisterContextMembers.Provider
+      //assign the provider values
       value={[registeredMemberScreens, setRegisteredMemberScreens]}
     >
       {props.children}
-    </registerContextMembers.provider>
+    </RegisterContextMembers.Provider>
   );
 };
 
-export { RegisteredMemberContext, registerContextMembers };
+export { RegisteredMemberContextProvider, RegisterContextMembers };

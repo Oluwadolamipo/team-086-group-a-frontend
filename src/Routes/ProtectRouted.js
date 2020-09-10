@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import { RegisteredMemberContextProvider } from "../Context/RegisteredMemberContext";
 
 const NotFound = () => {
   return <h2>pages not found</h2>;
@@ -17,9 +18,15 @@ const AuthenticationRoutes = () => {
           justifyContent: "space-between",
         }}
       >
-        <Switch>
-          <Route exact={true} component={NotFound} />
-        </Switch>
+        <RegisteredMemberContextProvider>
+          <Switch>
+            <Route
+              path="/team-086-group-a-frontend/dash"
+              exact={true}
+              component={NotFound}
+            />
+          </Switch>
+        </RegisteredMemberContextProvider>
       </div>
       {/* ) : ( */}
       {/* window.location.replace("/team-086-group-a-frontend/") */}

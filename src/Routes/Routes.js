@@ -1,24 +1,17 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import LandingPage from "../Pages/LandingPage/LandingPage";
-import AuthenticationRoutes from "./AuthenticationRoutes";
+import { BrowserRouter } from "react-router-dom";
 import Header from "../Common/Header.Component/Header";
 import Footer from "../Common/Footer.component/Footer";
+import UnProtectedRoutes from "./UnprotectedRoutes";
+import ProtectedRoutes from "./ProtectRouted";
 
 const Routes = () => {
   return (
     <div>
       <BrowserRouter>
         <Header />
-        <Switch>
-          <Route
-            exact
-            path="/team-086-group-a-frontend"
-            component={LandingPage}
-          />
-
-          <AuthenticationRoutes />
-        </Switch>
+        <UnProtectedRoutes />
+        <ProtectedRoutes />
         <Footer />
       </BrowserRouter>
     </div>
