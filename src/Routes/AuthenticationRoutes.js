@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-const Hello = () => {
+const NotFound = () => {
   return <h2>pages not found</h2>;
 };
 
@@ -18,7 +18,7 @@ const AuthenticationRoutes = () => {
         }}
       >
         <Switch>
-          <Route exact component={Hello} />
+          <Route exact component={NotFound} />
         </Switch>
       </div>
       {/* ) : ( */}
