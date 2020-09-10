@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import AuthenticationRoutes from "./Routes/AuthenticationRoutes";
@@ -8,7 +8,7 @@ import Footer from "./Common/Footer.component/Footer";
 // import NonAuthencationRoutes from "./Routes/NonAuthenticationRoutes";
 
 const App = () => (
-  <div className="App">
+  <div>
     <BrowserRouter>
       <Header />
       <Switch>
