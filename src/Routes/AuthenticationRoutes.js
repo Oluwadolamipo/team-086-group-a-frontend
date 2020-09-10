@@ -18,7 +18,7 @@ const AuthenticationRoutes = () => {
         }}
       >
         <Switch>
-          <Route exact component={NotFound} />
+          <Route exact={true} component={NotFound} />
         </Switch>
       </div>
       {/* ) : ( */}
