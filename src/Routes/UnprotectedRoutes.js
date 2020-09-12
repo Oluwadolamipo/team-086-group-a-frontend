@@ -1,30 +1,27 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import LandingPage from "../Pages/LandingPage/LandingPage";
 import { NonRegisteredMemberContextProvider } from "../Context/NonRegisteredMemberContext";
+import LandingPage from "../Pages/LandingPage/LandingPage";
+import RegistrationPages from "../Pages/RegistrationPages/RegistrationPages";
 
-const AuthenticationRoutes = () => {
+const UnProtectedRoutes = () => {
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          backgroundColor: "#faf4f4",
-          heigth: "100vh",
-          justifyContent: "space-between",
-        }}
-      >
-        <NonRegisteredMemberContextProvider>
-          <Switch>
-            <Route
-              path="/team-086-group-a-frontend/"
-              exact={true}
-              component={LandingPage}
-            />
-          </Switch>
-        </NonRegisteredMemberContextProvider>
-      </div>
+      <NonRegisteredMemberContextProvider>
+        <Switch>
+          <Route
+            path="/team-086-group-a-frontend/"
+            exact={true}
+            component={LandingPage}
+          />
+          <Route
+            path="/team-086-group-a-frontend/registration"
+            exact={true}
+            component={RegistrationPages}
+          />
+        </Switch>
+      </NonRegisteredMemberContextProvider>
     </div>
   );
 };
-export default AuthenticationRoutes;
+export default UnProtectedRoutes;

@@ -4,15 +4,7 @@ const RegisterContextMembers = React.createContext([{}, () => {}]);
 
 const RegisteredMemberContextProvider = (props) => {
   const [registeredMemberScreens, setRegisteredMemberScreens] = useState({
-    formValue: {
-      fullName: "",
-      email: "",
-      phoneNumber: "",
-      password: "",
-      confirmPassword: "",
-      formData: [],
-    },
-    collection: null,
+    collection: {},
   });
 
   return (
@@ -25,4 +17,4 @@ const RegisteredMemberContextProvider = (props) => {
   );
 };
 
-export { RegisteredMemberContextProvider, RegisterContextMembers };
+export { RegisterContextMembers, RegisteredMemberContextProvider };

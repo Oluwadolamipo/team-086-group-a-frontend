@@ -1,8 +1,8 @@
 import React from "react";
 import Routes from "./Routes/Routes";
-
+// import appStyles from "./App.css";
 const App = () => (
-  <div>
+  <div className="app">
     <Routes />
   </div>
 );

@@ -6,7 +6,7 @@ const NotFound = () => {
   return <h2>pages not found</h2>;
 };
 
-const AuthenticationRoutes = () => {
+const ProtectedRoutes = () => {
   return (
     <div>
       {/* {sessionStorage.getItem("token") ? ( */}
@@ -34,4 +34,4 @@ const AuthenticationRoutes = () => {
     </div>
   );
 };
-export default AuthenticationRoutes;
+export default ProtectedRoutes;
