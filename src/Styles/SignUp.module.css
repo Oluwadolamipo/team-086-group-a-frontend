@@ -5,10 +5,12 @@
   justify-content: space-evenly;
   animation: move 2s ease;
 }
+
 @keyframes move {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
@@ -24,9 +26,11 @@
   height: 100%;
   border-radius: 0;
 }
+
 .image img {
   width: 100%;
 }
+
 .asideWrapper {
   width: 50%;
   height: 100%;
@@ -49,6 +53,7 @@
   text-align: center;
   align-self: flex-end;
 }
+
 .signupLinks {
   display: flex;
   flex-direction: column;
@@ -72,14 +77,17 @@
   margin-top: 15px;
   transform: translateY(-50%);
 }
+
 .googleSignup span {
   color: #000;
   text-transform: capitalize;
   font-weight: bold;
 }
+
 .googleIcon {
   color: rgb(66 133 244);
 }
+
 .facebookSignup {
   border: 2px solid #7697f3;
   border-radius: 5px;
@@ -94,11 +102,13 @@
   margin-top: 15px;
   transform: translateY(-50%);
 }
+
 .facebookSignup span {
   color: #fff;
   text-transform: capitalize;
   font-weight: bold;
 }
+
 .facebookIcon {
   color: #fff;
 }
