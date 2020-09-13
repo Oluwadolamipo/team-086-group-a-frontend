@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import LandingPage from "../pages/LandingPage/LandingPage";
 import { NonRegisteredMemberContextProvider } from "../Context/NonRegisteredMemberContext";
 import ContactPage from "../pages/ContactPageModule/contact";
-import RegistrationPages from "../Pages/RegistrationPages/RegistrationPages";
+import RegistrationPages from "../pages/RegistrationPages/RegistrationPages";
 
 const UnProtectedRoutes = () => {
   return (
@@ -23,7 +23,7 @@ const UnProtectedRoutes = () => {
             component={RegistrationPages}
           />
             <Route 
-              path= "/contact"
+              path= "/team-086-group-a-frontend/contact"
               exact = {true}
               component={ContactPage}
             />

@@ -1,43 +1,17 @@
 import React from 'react';
-// import { render } from '@testing-library/react';
-// import App from './App';
 import ReactDOM from 'react-dom';
-import '../../index.css';
-// import Button from '../../Common/Button.component/Button.jsx';
 import Button from 'react-bootstrap/Button'
-import {Nav, Navbar, NavItem, NavDropdown} from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
-// import Navbar from 'react-bootstrap/Navbar'
-// import Nav from 'react-bootstrap/Nav'
-// import NavDropdown from 'react-bootstrap/NavDropdown'
-// // import Col from 'react-bootstrap/Col'
-import NavLink from '../../Common/NavLink.component/NavLink.jsx';
-import Input from '../../Common/Input.component/Input.jsx';
-import Label from '../../Common/Label.component/Label.jsx';
-// import Image from '../../Common/Image.component/Image.jsx';
 import Header from '../../Common/Header.Component/Header.jsx';
 import Footer from '../../Common/Footer.component/Footer.jsx';
-// import Footer from  '/src/Common/'
 import Style from './contact.module.css';
-import Img from '../../Asset/com.jpg';
 import MapContainer from '../../Components/MapComponent/Map';
 
 
 
-// import { 
-//     BrowserRouter as Router, 
-//     Route, 
-//     Switch, 
-//     Link, 
-//     Redirect 
-//   } from "react-router-dom";
-const btn_style = {
-    "color" : "#23CF43",
-}
 class ContactPage extends React.Component {
     constructor(props){
         super(props);
@@ -83,6 +57,7 @@ class ContactPage extends React.Component {
         return(
 
             <div className={Style.bg}>
+            <Header />
             <div className={Style.images}>
                 <h3>WELCOME</h3>
                 {/* <img className={Style.comImg} src={Img} /> */}
@@ -106,11 +81,8 @@ class ContactPage extends React.Component {
                     </Row>
 
 
-                    <Row className={Style.eachbox}>
-                        {/* <div className={Style.eachbox} >box1</div>
-                        <div>box1</div>
-                        <div>box1</div> */}
-                        <Col className={Style.smallBox} xs={12} md={{ span: 3, offset: 0 }}>
+                    <Row className={Style.allBoxes}>
+                        <Col className={Style.smallBox} xs={12} md={3}>
                                 <h5>
                                     box 1:
                                 </h5> 
@@ -118,7 +90,10 @@ class ContactPage extends React.Component {
                                 Sed tempore quas quisquam fugiat sint perferendis veritatis 
                             </p>
                         </Col>
-                        <Col className={Style.smallBox} xs={12} md={{ span: 3, offset: 1 }}>
+                        <Col xs={0} md={1}>
+                               
+                        </Col>
+                        <Col className={Style.smallBox} xs={12} md={3}>
                                 <h5>
                                     box 2:
                                 </h5> 
@@ -126,7 +101,10 @@ class ContactPage extends React.Component {
                                 Sed tempore quas quisquam fugiat sint perferendis veritatis 
                             </p>    
                         </Col>
-                        <Col className={Style.smallBox} xs={12} md={{span:3, offset:1}}>
+                        <Col xs={0} md={1}>
+                               
+                        </Col>
+                        <Col className={Style.smallBox} xs={12} md={3}>
                                 <h5>
                                     box 3:
                                 </h5> 
@@ -136,14 +114,17 @@ class ContactPage extends React.Component {
                         </Col>
                     </Row>
 
-                    <Row>
+                    <Row className={Style.mapForm}>
   
-                        <Col md="6" sm="12" xs="12" className={Style.map}>
+                        <Col md="5" sm="12" xs="12" className={Style.map}>
                             <MapContainer />
                         </Col>
 
+                        <Col md="1" sm="0" xs="0">
+                        </Col>
+
                         
-                        <Col md="6" sm="12" xs="12" className={Style.formGroup} >
+                        <Col md="5" sm="12" xs="12" className={Style.formGroup} >
                             <Form id="form" className={Style.formOrder} onSubmit={this.handleSubmit}>
                                 <Form.Group as = {Row}>
                                     <Col sm="10" md="10">
@@ -174,6 +155,7 @@ class ContactPage extends React.Component {
                     </Row>
                 </Container>
             </Container>
+            <Footer />
             </div>
         )
     }
