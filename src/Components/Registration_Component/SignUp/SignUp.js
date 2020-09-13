@@ -39,7 +39,6 @@ const Signup = () => {
 
   const isNumeric = (n) => {
     //function that checks for numbers
-    console.log(n);
     return !isNaN(parseFloat(n)) && isFinite(n);
   };
 
@@ -88,7 +87,7 @@ const Signup = () => {
       password,
       confirmPassword,
     };
-    console.log("formData", userObject);
+
     FormRef.current.reset(); //reset form on submit
     alert("sign up successfully");
     // this.props.signin(); //routing to signin page on componentdid update
