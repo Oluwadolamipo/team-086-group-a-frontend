@@ -94,7 +94,7 @@ const Signup = () => {
     try {
       // await axios.post("http://endPoint/", userObject)
     } catch (error) {
-      console.error(error);
+      throw error;
     }
   };
 
