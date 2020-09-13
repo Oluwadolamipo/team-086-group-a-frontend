@@ -18,7 +18,7 @@ const Button = ({
   borderRadius,
   ref,
 }) => (
-  <div className="button">
+  <div className={className ? className : button}>
     <button
       style={{
         backgroundColor: backgroundColor ? backgroundColor : "red",

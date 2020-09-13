@@ -21,7 +21,7 @@ const Image = ({
 }) => {
   const { customImage, customImageWrapper } = ImageStyles;
   return (
-    <div className={customImageWrapper}>
+    <div className={className ? className : customImageWrapper}>
       <img
         style={{
           width: width ? width : null,
