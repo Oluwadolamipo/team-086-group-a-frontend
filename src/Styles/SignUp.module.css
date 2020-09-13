@@ -120,6 +120,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  transform: translateY(-100%);
 }
 
 .leftLine {
@@ -142,6 +143,7 @@
   width: 100%;
   display: flex;
   justify-self: flex-end;
+  transform: translateY(-15%);
 }
 
 .form {
