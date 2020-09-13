@@ -1,6 +1,6 @@
-import React from 'react';
-import { Icon } from '@iconify/react';
-import locationIcon from '@iconify/icons-mdi/map-marker';
+import React from "react";
+import { Icon } from "@iconify/react";
+import locationIcon from "@iconify/icons-mdi/map-marker";
 
 const LocationPin = ({ text }) => (
     <div className="pin">

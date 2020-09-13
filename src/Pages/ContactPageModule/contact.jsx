@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import ReactDOM from 'react-dom';
-import Button from 'react-bootstrap/Button'
-import Row from 'react-bootstrap/Row';
-import Form from 'react-bootstrap/Form';
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Header from '../../Common/Header.Component/Header.jsx';
-import Footer from '../../Common/Footer.component/Footer.jsx';
-import Style from './contact.module.css';
-import MapContainer from '../../Components/MapComponent/Map';
+import Button from "react-bootstrap/Button"
+import Row from "react-bootstrap/Row";
+import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Header from "../../Common/Header.Component/Header.jsx";
+import Footer from "../../Common/Footer.component/Footer.jsx";
+import Style from "./contact.module.css";
+import MapContainer from "../../Components/MapComponent/Map";
 
 
 
@@ -17,22 +17,21 @@ class ContactPage extends React.Component {
         super(props);
 
         this.state = {
-            name: '',
-            email: '',
-            subject: '',
-            message: '',
+            name: " ",
+            email: " ",
+            subject: " ",
+            message: " ",
             disabled: false,
             messageSent : null,
 
-        }
+        };
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleChange = (e) => {
-        console.log(e)
         const target = e.target;
-        const value = target.type === "checkBox" ? target.checked : target.value
+        const value = target.type === "checkBox" ? target.checked : target.value;
         const name = target.name
 
         this.setState({
@@ -44,12 +43,12 @@ class ContactPage extends React.Component {
         this.setState({
             disabled : true,
         })
-    }
+    };
 
 
     render (){
         const location = {
-            address: '1600 Amphitheatre Parkway, Mountain View, california.',
+            address: "1600 Amphitheatre Parkway, Mountain View, california.",
             lat: 37.42216,
             lng: -122.08427,
           }
@@ -60,7 +59,6 @@ class ContactPage extends React.Component {
             <Header />
             <div className={Style.images}>
                 <h3>WELCOME</h3>
-                {/* <img className={Style.comImg} src={Img} /> */}
             </div>
 
             <Container fluid>
@@ -158,7 +156,7 @@ class ContactPage extends React.Component {
             <Footer />
             </div>
         )
-    }
+    };
 
 
 }
