@@ -140,7 +140,6 @@ class ContactPage extends React.Component {
   
                         <Col md="6" sm="12" xs="12" className={Style.map}>
                             <MapContainer />
-                            
                         </Col>
 
                         

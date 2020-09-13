@@ -3,18 +3,12 @@ import { Switch, Route } from "react-router-dom";
 import LandingPage from "../pages/LandingPage/LandingPage";
 import { NonRegisteredMemberContextProvider } from "../Context/NonRegisteredMemberContext";
 import ContactPage from "../pages/ContactPageModule/contact";
+import RegistrationPages from "../Pages/RegistrationPages/RegistrationPages";
 
-const AuthenticationRoutes = () => {
+const UnProtectedRoutes = () => {
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          backgroundColor: "#faf4f4",
-          heigth: "100vh",
-          justifyContent: "space-between",
-        }}
-      >
+      <div>
         <NonRegisteredMemberContextProvider>
           <Switch>
             <Route
@@ -22,6 +16,12 @@ const AuthenticationRoutes = () => {
               exact={true}
               component={LandingPage}
             />
+
+            <Route
+            path="/team-086-group-a-frontend/registration"
+            exact={true}
+            component={RegistrationPages}
+          />
             <Route 
               path= "/contact"
               exact = {true}
@@ -33,4 +33,4 @@ const AuthenticationRoutes = () => {
     </div>
   );
 };
-export default AuthenticationRoutes;
+export default UnProtectedRoutes;
