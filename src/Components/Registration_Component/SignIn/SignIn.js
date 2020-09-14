@@ -9,6 +9,7 @@ import RegImage from "../../../Asset/Rectangle 105.png";
 import { NonRegisterContextMembers } from "../../../Context/NonRegisteredMemberContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import FacebookLogin from "react-facebook-login";
 //
 const Signin = () => {
   //function for SignUp users
