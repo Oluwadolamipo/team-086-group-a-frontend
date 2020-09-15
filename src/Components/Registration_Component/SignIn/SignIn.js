@@ -67,6 +67,8 @@ const Signin = () => {
       password,
     };
 
+    console.log(userObject);
+
     FormRef.current.reset(); //reset form on submit
     alert("sign in successfully");
 

@@ -87,6 +87,7 @@ const Signup = () => {
       password,
       confirmPassword,
     };
+    console.log(userObject);
 
     FormRef.current.reset(); //reset form on submit
     alert("sign up successfully");

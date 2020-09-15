@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import CustomList from "../List.component/List";
 import FooterStyles from "./Footer.module.css";
 import { FooterQuickLinksCollections } from "../../Utils/QuickLinks_collection";
@@ -153,4 +154,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default withRouter(Footer);
