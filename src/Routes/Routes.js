@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import UnProtectedRoutes from "./UnprotectedRoutes";
 import LandingPage from "../Pages/LandingPage/LandingPage";
 import SignupRegistrationPage from "../Pages/RegistrationPages/RegistrationPages";
