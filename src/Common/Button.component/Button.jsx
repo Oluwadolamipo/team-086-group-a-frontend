@@ -29,6 +29,7 @@ const Button = ({
         padding: padding ? padding : null,
         border: border ? border : null,
         borderRadius: borderRadius ? borderRadius : null,
+        cursor: "pointer",
       }}
       onClick={click ? click : null}
       name={name ? name : null}

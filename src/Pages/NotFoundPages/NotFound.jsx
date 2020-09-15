@@ -12,7 +12,7 @@ const NotFound = () => {
           you may proceed to the registration page{" "}
           <CustomLinks
             text={"Sign up"}
-            url={`/team-086-group-a-frontend/signup`}
+            url={`/team-086-group-a-frontend/signin`}
             color={"blue"}
           />
         </p>

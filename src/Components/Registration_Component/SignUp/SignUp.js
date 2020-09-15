@@ -1,4 +1,5 @@
 import React, { useContext, useRef } from "react";
+import { withRouter } from "react-router-dom";
 import SignUpStyles from "../../../Styles/SignUp.module.css";
 import Button from "../../../Common/Button.component/Button";
 import CustomInput from "../../../Common/Input.component/Input";
@@ -10,7 +11,7 @@ import { NonRegisterContextMembers } from "../../../Context/NonRegisteredMemberC
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 //
-const Signup = () => {
+const Signup = ({ history }) => {
   //function for SignUp users
   const [datas, setData] = useContext(NonRegisterContextMembers);
   const {
@@ -36,6 +37,10 @@ const Signup = () => {
   const FormRef = useRef();
   const inputsRef = useRef();
   const { formValue } = datas;
+
+  const handleSignNavigation = () => {
+    history.push("/team-086-group-a-frontend/signin");
+  };
 
   const isNumeric = (n) => {
     //function that checks for numbers
@@ -91,14 +96,16 @@ const Signup = () => {
 
     FormRef.current.reset(); //reset form on submit
     alert("sign up successfully");
-    // this.props.signin(); //routing to signin page on componentdid update
+
+    //post to the server
     try {
       // await axios.post("http://endPoint/", userObject)
     } catch (error) {
       throw error;
     }
   };
-
+  //routing to signin page on componentdid update
+  history.push("/team-086-group-a-frontend/signin");
   return (
     <div className={container}>
       <div className={imageView}>
@@ -198,6 +205,7 @@ const Signup = () => {
               text={"create account"}
               name={"signup"}
               className={button}
+              click={handleSignNavigation}
             />
           </form>
         </div>
@@ -206,4 +214,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default withRouter(Signup);

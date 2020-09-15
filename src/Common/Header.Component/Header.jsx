@@ -7,7 +7,13 @@ import Image from "../../Asset/logo.png";
 
 import { HeaderNavLinksCollections } from "../../Utils/NavLinksCollections";
 import HeaderStyles from "../Header.Component/Header.module.css";
-const Header = () => {
+const Header = ({ history }) => {
+  const handleSignupButton = () => {
+    // routing to the signup page
+    history.push("/team-086-group-a-frontend/signup");
+  };
+
+  // destructuring of styles
   const {
     container,
     headerBackground,
@@ -43,6 +49,7 @@ const Header = () => {
               className={button}
               width={"12vw"}
               backgroundColor={"#000"}
+              click={handleSignupButton}
             />
           </div>
         </div>

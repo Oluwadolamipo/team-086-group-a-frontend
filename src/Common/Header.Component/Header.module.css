@@ -31,7 +31,7 @@
 }
 
 .image img {
-  width: 20%;
+  width: 7vw;
 }
 
 .navWrapper {
@@ -55,7 +55,7 @@
   font-weight: bolder;
 }
 
-.links:hover {
+.links a:hover {
   font-weight: lighter;
   color: #ff0000;
 }
