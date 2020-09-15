@@ -4,7 +4,6 @@ import { RegisteredMemberContextProvider } from "../Context/RegisteredMemberCont
 
 const ProtectedRoutes = (props) => {
   //checking for using token is session storage
-
   const isAuth = sessionStorage.getItem("token") ? (
     <RegisteredMemberContextProvider>
       <Route {...props} />
