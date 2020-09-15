@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import UnProtectedRoutes from "./UnprotectedRoutes";
 import LandingPage from "../Pages/LandingPage/LandingPage";
 import SignupRegistrationPage from "../Pages/RegistrationPages/RegistrationPages";
@@ -9,7 +9,7 @@ import NotFoundPage from "../Pages/NotFoundPages/NotFound";
 const Routes = () => {
   return (
     <div>
-      <BrowserRouter>
+      <Router>
         <Switch>
           <UnProtectedRoutes
             path="/team-086-group-a-frontend/"
@@ -32,7 +32,7 @@ const Routes = () => {
           />
           <Route render={NotFoundPage} />
         </Switch>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 };
