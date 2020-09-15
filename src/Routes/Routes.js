@@ -17,6 +17,11 @@ const Routes = () => {
             component={LandingPage}
           />
           <UnProtectedRoutes
+            path="/team-086-group-a-frontend/home"
+            exact
+            component={LandingPage}
+          />
+          <UnProtectedRoutes
             path="/team-086-group-a-frontend/signin"
             component={SigninRegistrationPage}
           />

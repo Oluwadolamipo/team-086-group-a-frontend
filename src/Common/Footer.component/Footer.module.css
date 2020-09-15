@@ -54,6 +54,9 @@
   line-height: 1.5;
 }
 
+.listElements {
+  cursor: pointer;
+}
 .openingHours {
   text-transform: capitalize;
   font-size: 12px;

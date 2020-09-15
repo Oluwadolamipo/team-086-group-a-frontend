@@ -3,7 +3,8 @@ import { Route, Redirect } from "react-router-dom";
 import { RegisteredMemberContextProvider } from "../Context/RegisteredMemberContext";
 
 const ProtectedRoutes = (props) => {
-  const isAuth = localStorage.getItem("TodoItems") ? (
+  //checking for using token is session storage
+  const isAuth = sessionStorage.getItem("token") ? (
     <RegisteredMemberContextProvider>
       <Route {...props} />
     </RegisteredMemberContextProvider>
