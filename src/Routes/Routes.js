@@ -6,9 +6,11 @@ import SignupRegistrationPage from "../Pages/RegistrationPages/RegistrationPages
 import UnProtectedRoutes from "./UnprotectedRoutes";
 import ProtectedRoutes from "./ProtectRouted";
 import NotFoundPage from "../Pages/NotFoundPages/NotFound";
+import Routers from "../Components/Blogs/Routers";
 const Routes = () => {
   return (
     <div>
+      <Routers/>
       <Router>
         <Switch>
           <UnProtectedRoutes
@@ -16,20 +18,24 @@ const Routes = () => {
             exact
             component={LandingPage}
           />
+
           <UnProtectedRoutes
             path="/team-086-group-a-frontend/home"
             // exact
             component={LandingPage}
           />
+
           <UnProtectedRoutes
             path="/team-086-group-a-frontend/signin"
             component={SigninRegistrationPage}
           />
+          
           <UnProtectedRoutes
             path="/team-086-group-a-frontend/signup"
             // exact
             component={SignupRegistrationPage}
           />
+          
           <UnProtectedRoutes
             path="/team-086-group-a-frontend/signin"
             // exact
@@ -42,7 +48,9 @@ const Routes = () => {
           />
           <Route render={NotFoundPage} />
         </Switch>
+        
       </Router>
+      {/* <Routers/> */}
     </div>
   );
 };
