@@ -6,6 +6,7 @@ import SignupRegistrationPage from "../Pages/RegistrationPages/RegistrationPages
 import UnProtectedRoutes from "./UnprotectedRoutes";
 import ProtectedRoutes from "./ProtectRouted";
 import NotFoundPage from "../Pages/NotFoundPages/NotFound";
+
 const Routes = () => {
   return (
     <div>
@@ -35,6 +36,7 @@ const Routes = () => {
             // exact
             component={SigninRegistrationPage}
           />
+
           <ProtectedRoutes
             path="/team-086-group-a-frontend/dash"
             // exact={true}

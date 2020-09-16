@@ -8,7 +8,8 @@ const Button = ({
   backgroundColor,
   click,
   text,
-  handleSubmit,
+  type,
+
   className,
   width,
   outline,
@@ -33,7 +34,6 @@ const Button = ({
       }}
       onClick={click ? click : null}
       name={name ? name : null}
-      onSubmit={handleSubmit ? handleSubmit : null}
       className={className ? className : button}
       ref={ref ? ref : null}
     >
