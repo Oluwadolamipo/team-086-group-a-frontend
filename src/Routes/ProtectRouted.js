@@ -4,13 +4,12 @@ import { RegisteredMemberContextProvider } from "../Context/RegisteredMemberCont
 
 const ProtectedRoutes = (props) => {
   //checking for using token is session storage
-  const isAuth = sessionStorage.getItem("token") ? (
+  const isAuth = !!sessionStorage.getItem("Token") ? (
     <RegisteredMemberContextProvider>
       <Route {...props} />
     </RegisteredMemberContextProvider>
   ) : (
-    // <Redirect to="/team-086-group-a-frontend/signin" />
-    console.log("object")
+    <Redirect to="/team-086-group-a-frontend/signin" />
   );
 
   return <div>{isAuth}</div>;

@@ -84,6 +84,7 @@ const Signup = ({ history }) => {
       inputsRef.current.children[4].firstChild.focus();
       return false;
     }
+
     //adding the userInformations to an object
     let userObject = {
       fullName,
@@ -97,6 +98,9 @@ const Signup = ({ history }) => {
     FormRef.current.reset(); //reset form on submit
     alert("sign up successfully");
 
+    //routing to signin page on componentdid update
+    history.push("/team-086-group-a-frontend/signin");
+
     //post to the server
     try {
       // await axios.post("http://endPoint/", userObject)
@@ -104,8 +108,7 @@ const Signup = ({ history }) => {
       throw error;
     }
   };
-  //routing to signin page on componentdid update
-  history.push("/team-086-group-a-frontend/signin");
+
   return (
     <div className={container}>
       <div className={imageView}>

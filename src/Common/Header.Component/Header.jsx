@@ -9,8 +9,8 @@ import { HeaderNavLinksCollections } from "../../Utils/NavLinksCollections";
 import HeaderStyles from "../Header.Component/Header.module.css";
 const Header = ({ history }) => {
   const handleSignupButton = () => {
-    // routing to the signup page
-    history.push("/team-086-group-a-frontend/signup");
+    // routing to the signin page
+    history.push("/team-086-group-a-frontend/signin");
   };
 
   // destructuring of styles
