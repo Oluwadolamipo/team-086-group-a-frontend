@@ -9,10 +9,14 @@ import RegImage from "../../../Asset/Rectangle 105.png";
 import { NonRegisterContextMembers } from "../../../Context/NonRegisteredMemberContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+
+import { faKeycdn } from "@fortawesome/free-brands-svg-icons";
+
 //
 const Signin = () => {
   //function for SignUp users
   const [datas, setData] = useContext(NonRegisterContextMembers);
+
   const {
     container,
     imageView,
@@ -32,7 +36,28 @@ const Signin = () => {
     form,
     input,
     button,
+    passwordVisibilityStatus,
+    options,
+    remindMe,
+    forgotPassword,
+    noAccount,
   } = SigninStyles;
+
+  //toggling the visibility status of password
+  const handleTogglePassword = () => {
+    return inputsRef.current.children[1].firstChild.type === "password" &&
+      inputsRef.current.children[1].firstChild.value !== ""
+      ? (inputsRef.current.children[1].firstChild.type = "text")
+      : (inputsRef.current.children[1].firstChild.type = "password");
+  };
+
+  //toggling the passwords icon on visibility check
+  const handleToggleIconColor = ({ ref }) =>
+    ref.currentTarget.style.color === "" &&
+    inputsRef.current.children[1].firstChild.value !== ""
+      ? (ref.currentTarget.style.color = "#ff0000")
+      : (ref.currentTarget.style.color = "");
+
   const FormRef = useRef();
   const inputsRef = useRef();
   const { formValue } = datas;
@@ -142,10 +167,37 @@ const Signin = () => {
                 value={formValue.password}
                 onChange={handleChange}
                 isRequired={true}
+                icon={
+                  <FontAwesomeIcon
+                    icon={faKeycdn}
+                    onClick={(ref) => handleToggleIconColor({ ref })}
+                    className={passwordVisibilityStatus}
+                  />
+                }
+                iconClick={handleTogglePassword}
               />
             </div>
             <Button text={"log in"} name={"signin"} className={button} />
           </form>
+        </div>
+        <div className={options}>
+          <div className={remindMe}>
+            <CustomInput type="checkbox" name={"checkbox"} />
+            <spaan>Remember me</spaan>
+          </div>
+          <div className={forgotPassword}>
+            <span>Forgot password?</span>
+          </div>
+          <div className={noAccount}>
+            <span>
+              No account?{" "}
+              <CustomLink
+                text={"Create one"}
+                color="#ff0000"
+                url={"/team-086-group-a-frontend/signup"}
+              />
+            </span>
+          </div>
         </div>
       </div>
     </div>
