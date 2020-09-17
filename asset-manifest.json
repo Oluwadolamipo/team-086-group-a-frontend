@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/team-086-group-a-frontend/static/css/main.447789c3.chunk.css",
-    "main.js": "/team-086-group-a-frontend/static/js/main.07f8e27a.chunk.js",
-    "main.js.map": "/team-086-group-a-frontend/static/js/main.07f8e27a.chunk.js.map",
+    "main.css": "/team-086-group-a-frontend/static/css/main.e1612521.chunk.css",
+    "main.js": "/team-086-group-a-frontend/static/js/main.0902b789.chunk.js",
+    "main.js.map": "/team-086-group-a-frontend/static/js/main.0902b789.chunk.js.map",
     "runtime-main.js": "/team-086-group-a-frontend/static/js/runtime-main.df0d6e53.js",
     "runtime-main.js.map": "/team-086-group-a-frontend/static/js/runtime-main.df0d6e53.js.map",
-    "static/js/2.f42545b3.chunk.js": "/team-086-group-a-frontend/static/js/2.f42545b3.chunk.js",
-    "static/js/2.f42545b3.chunk.js.map": "/team-086-group-a-frontend/static/js/2.f42545b3.chunk.js.map",
+    "static/js/2.46e2f94a.chunk.js": "/team-086-group-a-frontend/static/js/2.46e2f94a.chunk.js",
+    "static/js/2.46e2f94a.chunk.js.map": "/team-086-group-a-frontend/static/js/2.46e2f94a.chunk.js.map",
     "index.html": "/team-086-group-a-frontend/index.html",
-    "precache-manifest.74a4b7ce53d8bd7acb03fad49a98c550.js": "/team-086-group-a-frontend/precache-manifest.74a4b7ce53d8bd7acb03fad49a98c550.js",
+    "precache-manifest.2d4df22415d2566c223365cf33613ba3.js": "/team-086-group-a-frontend/precache-manifest.2d4df22415d2566c223365cf33613ba3.js",
     "service-worker.js": "/team-086-group-a-frontend/service-worker.js",
-    "static/css/main.447789c3.chunk.css.map": "/team-086-group-a-frontend/static/css/main.447789c3.chunk.css.map",
-    "static/js/2.f42545b3.chunk.js.LICENSE.txt": "/team-086-group-a-frontend/static/js/2.f42545b3.chunk.js.LICENSE.txt",
+    "static/css/main.e1612521.chunk.css.map": "/team-086-group-a-frontend/static/css/main.e1612521.chunk.css.map",
+    "static/js/2.46e2f94a.chunk.js.LICENSE.txt": "/team-086-group-a-frontend/static/js/2.46e2f94a.chunk.js.LICENSE.txt",
     "static/media/Rectangle 105.png": "/team-086-group-a-frontend/static/media/Rectangle 105.70a4ded6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.df0d6e53.js",
-    "static/js/2.f42545b3.chunk.js",
-    "static/css/main.447789c3.chunk.css",
-    "static/js/main.07f8e27a.chunk.js"
+    "static/js/2.46e2f94a.chunk.js",
+    "static/css/main.e1612521.chunk.css",
+    "static/js/main.0902b789.chunk.js"
   ]
 }
