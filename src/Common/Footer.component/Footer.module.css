@@ -1,0 +1,181 @@
+.container {
+  width: 100%;
+  height: 20em;
+}
+
+.wrapper {
+  width: 100%;
+  height: 150%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #000;
+}
+
+.contentWrapper {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logo {
+  display: flex;
+  width: 15%;
+}
+.logo img {
+  transform: translate(-40%, 5%);
+  height: 40%;
+}
+
+.shortLinksWrapper {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.quickLinks {
+  text-transform: capitalize;
+  font-size: 12px;
+  flex: 0.4;
+}
+.quickLinks h3 {
+  color: #fff;
+}
+.listWrapper {
+  transform: translateY(20%);
+}
+.list {
+  list-style: none;
+}
+
+.listElements {
+  text-transform: capitalize;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.listElements {
+  cursor: pointer;
+}
+.openingHours {
+  text-transform: capitalize;
+  font-size: 12px;
+  flex: 0.4;
+}
+.openingHours h3 {
+  color: #fff;
+}
+
+.openingHourDetail {
+  transform: translateY(60%);
+  color: #fff;
+  line-height: 1.7;
+}
+.openingHourDetail span {
+  font-weight: bold;
+}
+.openingHourDetail p {
+  font-weight: lighter;
+}
+.contactInfo {
+  text-transform: capitalize;
+  font-size: 12px;
+  flex: 0.4;
+}
+.contactInfo h3 {
+  color: #fff;
+  align-self: flex-start;
+}
+.contactInfoDetail {
+  transform: translateY(25%);
+  display: grid;
+  grid-gap: 20px;
+  color: #fff;
+}
+.contactInfoDetail address,
+p {
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  flex: 0.4;
+  font-size: 12px;
+}
+
+.subscribe h3 {
+  align-self: flex-start;
+  color: #fff;
+}
+.subscribeEvents {
+  height: 16.6em;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(15%);
+}
+
+.formWrapper {
+  flex: 0.4;
+}
+.form {
+  display: flex;
+}
+
+.input {
+  height: 3em;
+  width: 13em;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.button {
+  height: 3em;
+  width: 5em;
+  border-color: #ff0000;
+  font-size: 13px;
+}
+
+.text {
+  color: #fff;
+  font-weight: lighter;
+}
+
+.bottomSection {
+  width: 100%;
+  height: 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copyright {
+  flex-basis: 20%;
+}
+
+.copyright span {
+  margin-left: 10%;
+  font-weight: lighter;
+  color: #fff;
+  text-transform: uppercase;
+}
+.brandslogos {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 20%;
+}
+
+.hints {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 30%;
+}
+
+.hints span {
+  color: #fff;
+  font-weight: lighter;
+  text-transform: capitalize;
+  margin-right: 6%;
+}

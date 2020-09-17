@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* .App {
   text-align: center;
 }
@@ -62,3 +63,12 @@ a {
   color:#333;
   text-decoration: none;
 }
+=======
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-rendering: optimizeSpeed;
+  image-rendering: optimizeQuality;
+}
+>>>>>>> develop

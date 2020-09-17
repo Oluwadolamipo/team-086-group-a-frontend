@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 // import logo from './logo.svg';
 import Home from './blogFold/containers/Home';
@@ -20,3 +21,15 @@ function App() {
 }
 
 export default App;
+=======
+import React from "react";
+import Routes from "./Routes/Routes";
+// import appStyles from "./App.css";
+const App = () => (
+  <div className="app">
+    <Routes />
+  </div>
+);
+
+export default App;
+>>>>>>> develop

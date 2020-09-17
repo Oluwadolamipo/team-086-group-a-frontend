@@ -18,7 +18,7 @@ const Button = ({
   borderRadius,
   ref,
 }) => (
-  <div className="button">
+  <div className={className ? className : button}>
     <button
       style={{
         backgroundColor: backgroundColor ? backgroundColor : "red",
@@ -29,6 +29,7 @@ const Button = ({
         padding: padding ? padding : null,
         border: border ? border : null,
         borderRadius: borderRadius ? borderRadius : null,
+        cursor: "pointer",
       }}
       onClick={click ? click : null}
       name={name ? name : null}

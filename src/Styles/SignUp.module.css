@@ -1,0 +1,186 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  animation: move 2s ease;
+}
+
+@keyframes move {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.imageView {
+  width: 50%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+.image img {
+  width: 100%;
+}
+
+.asideWrapper {
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signupText {
+  flex: 0.15;
+  width: 100%;
+  display: flex;
+}
+
+.signupText h2 {
+  width: 100%;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  align-self: flex-end;
+}
+
+.signupLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 0.3;
+}
+
+.googleSignup {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  width: 20vw;
+  height: 2.5em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ffff;
+  text-transform: capitalize;
+  filter: drop-shadow(5px 10px 10px #ccc);
+  margin-top: 15px;
+  transform: translateY(-50%);
+}
+
+.googleSignup span {
+  color: #000;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.googleIcon {
+  color: rgb(66 133 244);
+}
+
+.facebookSignup {
+  border: 2px solid #7697f3;
+  border-radius: 5px;
+  width: 20vw;
+  height: 2.5em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #2456da;
+  text-transform: capitalize;
+  filter: drop-shadow(5px 10px 10px #ccc);
+  margin-top: 15px;
+  transform: translateY(-50%);
+}
+
+.facebookSignup span {
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.facebookIcon {
+  color: #fff;
+}
+
+.lineWrapper {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: translateY(-100%);
+}
+
+.leftLine {
+  width: 37%;
+  height: 2px;
+  background-color: #000;
+}
+
+.textWrapper {
+  width: 5%;
+  height: 20px;
+  color: #000;
+  padding-right: 5px;
+  padding-left: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.formWrapper {
+  flex: 0.6;
+  width: 100%;
+  display: flex;
+  justify-self: flex-end;
+  transform: translateY(-15%);
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 3;
+}
+
+.input {
+  width: 40vw;
+  height: 2.5em;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 5em;
+  transform: translateY(40%);
+}
+
+.button button {
+  width: 15vw;
+  height: 2.5em;
+  outline: none;
+  border-radius: 10px;
+  border-color: #ff5e00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-transform: capitalize;
+  cursor: pointer;
+}

@@ -1,11 +1,19 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import CustomImage from "../Image.component/Image";
 import CustomNavLinks from "../NavLink.component/NavLink";
 import CustomButton from "../Button.component/Button";
 import Image from "../../Asset/logo.png";
+
 import { HeaderNavLinksCollections } from "../../Utils/NavLinksCollections";
 import HeaderStyles from "../Header.Component/Header.module.css";
-const Header = () => {
+const Header = ({ history }) => {
+  const handleSignupButton = () => {
+    // routing to the signin page
+    history.push("/team-086-group-a-frontend/signin");
+  };
+
+  // destructuring of styles
   const {
     container,
     headerBackground,
@@ -28,7 +36,7 @@ const Header = () => {
             {HeaderNavLinksCollections &&
               HeaderNavLinksCollections.map((navlinks, index) => (
                 <CustomNavLinks
-                  url={"/"}
+                  url={`/team-086-group-a-frontend/${navlinks}`}
                   text={navlinks}
                   key={index}
                   className={links}
@@ -41,6 +49,7 @@ const Header = () => {
               className={button}
               width={"12vw"}
               backgroundColor={"#000"}
+              click={handleSignupButton}
             />
           </div>
         </div>
@@ -49,4 +58,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withRouter(Header);
