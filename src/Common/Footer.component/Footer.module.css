@@ -123,7 +123,7 @@ p {
 
 .input {
   height: 3em;
-  width: 13em;
+  width: 15vw;
   padding: 10px;
   border-radius: 5px;
   outline: none;
@@ -131,7 +131,7 @@ p {
 
 .button {
   height: 3em;
-  width: 5em;
+  width: 5vw;
   border-color: #ff0000;
   font-size: 13px;
 }

@@ -9,6 +9,8 @@ import Header from "../../Common/Header.Component/Header.jsx";
 import Footer from "../../Common/Footer.component/Footer.jsx";
 import Style from "./contact.module.css";
 import MapContainer from "../../Components/MapComponent/Map";
+import { NonRegisterContextMembers } from "../../Context/NonRegisteredMemberContext";
+
 
 
 
@@ -25,14 +27,14 @@ class ContactPage extends React.Component {
             messageSent : null,
 
         };
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange = (e) => {
         const target = e.target;
         const value = target.type === "checkBox" ? target.checked : target.value;
-        const name = target.name
+        const name = target.name;
 
         this.setState({
             [name] : value,
@@ -54,6 +56,8 @@ class ContactPage extends React.Component {
           }
 
         return(
+            
+
 
             <div className={Style.bg}>
             <Header />

@@ -3,17 +3,7 @@
   height: 100vh;
   display: flex;
   justify-content: space-evenly;
-  animation: move 2s ease;
-}
-
-@keyframes move {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
+  /* animation: move 2s ease alternate; */
 }
 
 .imageView {
@@ -38,15 +28,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: move 2s ease alternate;
 }
 
-.signupText {
-  flex-basis: 50%;
+@keyframes move {
+  from {
+    height: 0%;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+.signinText {
+  flex-basis: 16%;
   width: 100%;
   display: flex;
 }
 
-.signupText h2 {
+.signinText h2 {
   width: 100%;
   color: #000;
   text-transform: uppercase;
@@ -54,16 +55,16 @@
   align-self: flex-end;
 }
 
-.signupLinks {
+.signinLinks {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  flex-basis: 20%;
+  flex-basis: 15%;
 }
 
-.googleSignup {
+.googleSignin {
   border: 2px solid #fff;
   border-radius: 5px;
   width: 20vw;
@@ -75,9 +76,10 @@
   text-transform: capitalize;
   filter: drop-shadow(5px 10px 10px #ccc);
   margin-top: 15px;
+  transform: translateY(-20%);
 }
 
-.googleSignup span {
+.googleSignin span {
   color: #000;
   text-transform: capitalize;
   font-weight: bold;
@@ -87,7 +89,7 @@
   color: rgb(66 133 244);
 }
 
-.facebookSignup {
+.facebookSignin {
   border: 2px solid #7697f3;
   border-radius: 5px;
   width: 20vw;
@@ -99,9 +101,10 @@
   text-transform: capitalize;
   filter: drop-shadow(5px 10px 10px #ccc);
   margin-top: 15px;
+  transform: translateY(-20%);
 }
 
-.facebookSignup span {
+.facebookSignin span {
   color: #fff;
   text-transform: capitalize;
   font-weight: bold;
@@ -115,7 +118,6 @@
   width: 100%;
   height: 50px;
   display: flex;
-  flex-basis: 20%;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -163,11 +165,11 @@
 }
 
 .button {
-  width: 100%;
+  width: 12 50%;
   display: flex;
   justify-content: center;
   height: 5em;
-  transform: translateY(30%);
+  transform: translateY(40%);
 }
 
 .button button {
@@ -184,16 +186,26 @@
   cursor: pointer;
 }
 
-.signinNav {
-  width: 100%;
-  flex-basis: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .passwordVisibilityStatus {
   position: relative;
   right: 8%;
   cursor: pointer;
+}
+
+.options {
+  display: grid;
+  grid-gap: 10px;
+  flex-basis: 30%;
+  justify-content: center;
+}
+
+.remindMe {
+  display: flex;
+}
+
+.remindMe span {
+  padding-right: 0.2em;
+}
+.noAccount {
+  transform: translateX(-15%);
 }

@@ -1,4 +1,5 @@
 import React, { useContext, useRef } from "react";
+import { withRouter } from "react-router-dom";
 import SignUpStyles from "../../../Styles/SignUp.module.css";
 import Button from "../../../Common/Button.component/Button";
 import CustomInput from "../../../Common/Input.component/Input";
@@ -8,9 +9,13 @@ import RegImage from "../../../Asset/Rectangle 105.png";
 // import axios from "axios";
 import { NonRegisterContextMembers } from "../../../Context/NonRegisteredMemberContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGoogle,
+  faFacebookF,
+  faKeycdn,
+} from "@fortawesome/free-brands-svg-icons";
 //
-const Signup = () => {
+const Signup = ({ history }) => {
   //function for SignUp users
   const [datas, setData] = useContext(NonRegisterContextMembers);
   const {
@@ -32,10 +37,45 @@ const Signup = () => {
     form,
     input,
     button,
+    signinNav,
+    passwordVisibilityStatus,
   } = SignUpStyles;
   const FormRef = useRef();
   const inputsRef = useRef();
   const { formValue } = datas;
+
+  const handleSignNavigation = async () => {
+    await history.push("/team-086-group-a-frontend/signin");
+  };
+
+  //toggling the visibility status of password
+  const handleTogglePassword = () => {
+    return inputsRef.current.children[3].firstChild.type === "password" &&
+      inputsRef.current.children[3].firstChild.value !== ""
+      ? (inputsRef.current.children[3].firstChild.type = "text")
+      : (inputsRef.current.children[3].firstChild.type = "password");
+  };
+
+  //toggling the visibility status of confirm password
+  const handleToggleConfirmPassword = () => {
+    return inputsRef.current.children[4].firstChild.type === "password" &&
+      inputsRef.current.children[4].firstChild.value !== ""
+      ? (inputsRef.current.children[4].firstChild.type = "text")
+      : (inputsRef.current.children[4].firstChild.type = "password");
+  };
+
+  //toggling the passwords icon on visibility check
+  const handlePasswordToggleIconColor = ({ ref }) =>
+    ref.currentTarget.style.color === "" &&
+    inputsRef.current.children[3].firstChild.value !== ""
+      ? (ref.currentTarget.style.color = "#ff0000")
+      : (ref.currentTarget.style.color = "");
+
+  const handleConfirmPasswordToggleIconColor = ({ ref }) =>
+    ref.currentTarget.style.color === "" &&
+    inputsRef.current.children[4].firstChild.value !== ""
+      ? (ref.currentTarget.style.color = "#ff0000")
+      : (ref.currentTarget.style.color = "");
 
   const isNumeric = (n) => {
     //function that checks for numbers
@@ -79,6 +119,7 @@ const Signup = () => {
       inputsRef.current.children[4].firstChild.focus();
       return false;
     }
+
     //adding the userInformations to an object
     let userObject = {
       fullName,
@@ -87,15 +128,19 @@ const Signup = () => {
       password,
       confirmPassword,
     };
+    console.log(userObject);
 
     FormRef.current.reset(); //reset form on submit
-    alert("sign up successfully");
-    // this.props.signin(); //routing to signin page on componentdid update
+
+    //post to the server
     try {
       // await axios.post("http://endPoint/", userObject)
     } catch (error) {
       throw error;
     }
+    alert("sign up successfully");
+    //routing to signin page on componentdid update
+    handleSignNavigation();
   };
 
   return (
@@ -124,7 +169,7 @@ const Signup = () => {
                 <span>signup with facebook</span>
               </div>
             }
-            url={"/"}
+            url={"/team-086-group-a-frontend"}
           />
         </div>
 
@@ -182,6 +227,14 @@ const Signup = () => {
                 value={formValue.password}
                 onChange={handleChange}
                 isRequired={true}
+                icon={
+                  <FontAwesomeIcon
+                    icon={faKeycdn}
+                    onClick={(ref) => handlePasswordToggleIconColor({ ref })}
+                    className={passwordVisibilityStatus}
+                  />
+                }
+                iconClick={handleTogglePassword}
               />
               <CustomInput
                 type={"password"}
@@ -191,6 +244,16 @@ const Signup = () => {
                 value={formValue.confirmPassword}
                 onChange={handleChange}
                 isRequired={true}
+                icon={
+                  <FontAwesomeIcon
+                    icon={faKeycdn}
+                    onClick={(ref) =>
+                      handleConfirmPasswordToggleIconColor({ ref })
+                    }
+                    className={passwordVisibilityStatus}
+                  />
+                }
+                iconClick={handleToggleConfirmPassword}
               />
             </div>
             <Button
@@ -200,9 +263,19 @@ const Signup = () => {
             />
           </form>
         </div>
+        <div className={signinNav}>
+          <span>
+            Already have and account{" "}
+            <CustomLink
+              text="Login"
+              url={"/team-086-group-a-frontend/signin"}
+              color={"#ff0000"}
+            />
+          </span>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Signup;
+export default withRouter(Signup);

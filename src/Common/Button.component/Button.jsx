@@ -8,7 +8,8 @@ const Button = ({
   backgroundColor,
   click,
   text,
-  handleSubmit,
+  type,
+
   className,
   width,
   outline,
@@ -29,10 +30,10 @@ const Button = ({
         padding: padding ? padding : null,
         border: border ? border : null,
         borderRadius: borderRadius ? borderRadius : null,
+        cursor: "pointer",
       }}
       onClick={click ? click : null}
       name={name ? name : null}
-      onSubmit={handleSubmit ? handleSubmit : null}
       className={className ? className : button}
       ref={ref ? ref : null}
     >

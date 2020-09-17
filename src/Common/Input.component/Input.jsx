@@ -27,6 +27,8 @@ const Input = ({
   spellCheck,
   readOnly,
   onInput,
+  icon,
+  iconClick,
 }) => {
   const textInput = useRef(null);
 
@@ -62,6 +64,7 @@ const Input = ({
         readOnly={readOnly ? readOnly : null}
         onInput={onInput ? onInput : null}
       />
+      <span onClick={iconClick ? iconClick : null}>{icon ? icon : null}</span>
     </div>
   );
 };

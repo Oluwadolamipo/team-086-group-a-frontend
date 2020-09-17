@@ -1,37 +1,17 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import { RegisteredMemberContextProvider } from "../Context/RegisteredMemberContext";
 
-const NotFound = () => {
-  return <h2>pages not found</h2>;
-};
-
-const ProtectedRoutes = () => {
-  return (
-    <div>
-      {/* {sessionStorage.getItem("token") ? ( */}
-      <div
-        style={{
-          display: "flex",
-          backgroundColor: "#faf4f4",
-          heigth: "100vh",
-          justifyContent: "space-between",
-        }}
-      >
-        <RegisteredMemberContextProvider>
-          <Switch>
-            <Route
-              path="/team-086-group-a-frontend/dash"
-              exact={true}
-              component={NotFound}
-            />
-          </Switch>
-        </RegisteredMemberContextProvider>
-      </div>
-      {/* ) : ( */}
-      {/* window.location.replace("/team-086-group-a-frontend/") */}
-      {/* )} */}
-    </div>
+const ProtectedRoutes = (props) => {
+  //checking for using token is session storage
+  const isAuth = !!sessionStorage.getItem("Token") ? (
+    <RegisteredMemberContextProvider>
+      <Route {...props} />
+    </RegisteredMemberContextProvider>
+  ) : (
+    <Redirect to="/team-086-group-a-frontend/signin" />
   );
+
+  return <div>{isAuth}</div>;
 };
 export default ProtectedRoutes;
