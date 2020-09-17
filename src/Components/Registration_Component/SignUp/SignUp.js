@@ -9,7 +9,11 @@ import RegImage from "../../../Asset/Rectangle 105.png";
 // import axios from "axios";
 import { NonRegisterContextMembers } from "../../../Context/NonRegisteredMemberContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGoogle,
+  faFacebookF,
+  faKeycdn,
+} from "@fortawesome/free-brands-svg-icons";
 //
 const Signup = ({ history }) => {
   //function for SignUp users
@@ -33,14 +37,45 @@ const Signup = ({ history }) => {
     form,
     input,
     button,
+    signinNav,
+    passwordVisibilityStatus,
   } = SignUpStyles;
   const FormRef = useRef();
   const inputsRef = useRef();
   const { formValue } = datas;
 
-  const handleSignNavigation = () => {
-    history.push("/team-086-group-a-frontend/signin");
+  const handleSignNavigation = async () => {
+    await history.push("/team-086-group-a-frontend/signin");
   };
+
+  //toggling the visibility status of password
+  const handleTogglePassword = () => {
+    return inputsRef.current.children[3].firstChild.type === "password" &&
+      inputsRef.current.children[3].firstChild.value !== ""
+      ? (inputsRef.current.children[3].firstChild.type = "text")
+      : (inputsRef.current.children[3].firstChild.type = "password");
+  };
+
+  //toggling the visibility status of confirm password
+  const handleToggleConfirmPassword = () => {
+    return inputsRef.current.children[4].firstChild.type === "password" &&
+      inputsRef.current.children[4].firstChild.value !== ""
+      ? (inputsRef.current.children[4].firstChild.type = "text")
+      : (inputsRef.current.children[4].firstChild.type = "password");
+  };
+
+  //toggling the passwords icon on visibility check
+  const handlePasswordToggleIconColor = ({ ref }) =>
+    ref.currentTarget.style.color === "" &&
+    inputsRef.current.children[3].firstChild.value !== ""
+      ? (ref.currentTarget.style.color = "#ff0000")
+      : (ref.currentTarget.style.color = "");
+
+  const handleConfirmPasswordToggleIconColor = ({ ref }) =>
+    ref.currentTarget.style.color === "" &&
+    inputsRef.current.children[4].firstChild.value !== ""
+      ? (ref.currentTarget.style.color = "#ff0000")
+      : (ref.currentTarget.style.color = "");
 
   const isNumeric = (n) => {
     //function that checks for numbers
@@ -96,10 +131,6 @@ const Signup = ({ history }) => {
     console.log(userObject);
 
     FormRef.current.reset(); //reset form on submit
-    alert("sign up successfully");
-
-    //routing to signin page on componentdid update
-    history.push("/team-086-group-a-frontend/signin");
 
     //post to the server
     try {
@@ -107,6 +138,9 @@ const Signup = ({ history }) => {
     } catch (error) {
       throw error;
     }
+    alert("sign up successfully");
+    //routing to signin page on componentdid update
+    handleSignNavigation();
   };
 
   return (
@@ -135,7 +169,7 @@ const Signup = ({ history }) => {
                 <span>signup with facebook</span>
               </div>
             }
-            url={"/"}
+            url={"/team-086-group-a-frontend"}
           />
         </div>
 
@@ -193,6 +227,14 @@ const Signup = ({ history }) => {
                 value={formValue.password}
                 onChange={handleChange}
                 isRequired={true}
+                icon={
+                  <FontAwesomeIcon
+                    icon={faKeycdn}
+                    onClick={(ref) => handlePasswordToggleIconColor({ ref })}
+                    className={passwordVisibilityStatus}
+                  />
+                }
+                iconClick={handleTogglePassword}
               />
               <CustomInput
                 type={"password"}
@@ -202,15 +244,34 @@ const Signup = ({ history }) => {
                 value={formValue.confirmPassword}
                 onChange={handleChange}
                 isRequired={true}
+                icon={
+                  <FontAwesomeIcon
+                    icon={faKeycdn}
+                    onClick={(ref) =>
+                      handleConfirmPasswordToggleIconColor({ ref })
+                    }
+                    className={passwordVisibilityStatus}
+                  />
+                }
+                iconClick={handleToggleConfirmPassword}
               />
             </div>
             <Button
               text={"create account"}
               name={"signup"}
               className={button}
-              click={handleSignNavigation}
             />
           </form>
+        </div>
+        <div className={signinNav}>
+          <span>
+            Already have and account{" "}
+            <CustomLink
+              text="Login"
+              url={"/team-086-group-a-frontend/signin"}
+              color={"#ff0000"}
+            />
+          </span>
         </div>
       </div>
     </div>

@@ -41,7 +41,7 @@
 }
 
 .signupText {
-  flex: 0.15;
+  flex: 0.23;
   width: 100%;
   display: flex;
 }
@@ -60,7 +60,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  flex: 0.3;
+  flex: 0.2;
 }
 
 .googleSignup {
@@ -75,7 +75,6 @@
   text-transform: capitalize;
   filter: drop-shadow(5px 10px 10px #ccc);
   margin-top: 15px;
-  transform: translateY(-50%);
 }
 
 .googleSignup span {
@@ -100,7 +99,6 @@
   text-transform: capitalize;
   filter: drop-shadow(5px 10px 10px #ccc);
   margin-top: 15px;
-  transform: translateY(-50%);
 }
 
 .facebookSignup span {
@@ -120,7 +118,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  transform: translateY(-100%);
 }
 
 .leftLine {
@@ -144,7 +141,6 @@
   width: 100%;
   display: flex;
   justify-self: flex-end;
-  transform: translateY(-15%);
 }
 
 .form {
@@ -156,6 +152,9 @@
 }
 
 .input {
+  position: relative;
+  right: -2%;
+
   width: 40vw;
   height: 2.5em;
   border-radius: 5px;
@@ -168,11 +167,11 @@
   display: flex;
   justify-content: center;
   height: 5em;
-  transform: translateY(40%);
+  transform: translateY(30%);
 }
 
 .button button {
-  width: 15vw;
+  width: 40vw;
   height: 2.5em;
   outline: none;
   border-radius: 10px;
@@ -182,5 +181,19 @@
   align-items: center;
   font-size: 16px;
   text-transform: capitalize;
+  cursor: pointer;
+}
+
+.signinNav {
+  width: 100%;
+  flex: 0.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.passwordVisibilityStatus {
+  position: relative;
+  right: 8%;
   cursor: pointer;
 }
