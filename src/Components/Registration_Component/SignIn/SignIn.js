@@ -183,7 +183,7 @@ const Signin = () => {
         <div className={options}>
           <div className={remindMe}>
             <CustomInput type="checkbox" name={"checkbox"} />
-            <spaan>Remember me</spaan>
+            <span>Remember me</span>
           </div>
           <div className={forgotPassword}>
             <span>Forgot password?</span>
