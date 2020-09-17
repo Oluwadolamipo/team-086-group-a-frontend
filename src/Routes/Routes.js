@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LandingPage from "../Pages/LandingPage/LandingPage";
-import ContactPage from "../Pages/ContactPageModule/contact";
+import ContactPage from "../Pages/ContactPage/contact";
 import SigninRegistrationPage from "../Pages/RegistrationPages/SigninRegistration";
 import SignupRegistrationPage from "../Pages/RegistrationPages/RegistrationPages";
 import UnProtectedRoutes from "./UnprotectedRoutes";
