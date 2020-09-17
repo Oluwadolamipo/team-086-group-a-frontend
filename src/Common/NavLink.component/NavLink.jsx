@@ -14,6 +14,7 @@ const NavLinks = ({
   padding,
   backgroundColor,
   margin,
+  mouseEnter,
 }) => (
   <NavLink
     to={url}
@@ -29,6 +30,7 @@ const NavLinks = ({
       width: width ? width : null,
       height: height ? height : null,
       margin: margin ? margin : null,
+      onMouseEnter: mouseEnter ? mouseEnter : null,
     }}
   >
     {text ? text : "am here to navigate"}
