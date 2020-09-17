@@ -1,11 +1,11 @@
 .container {
   width: 100%;
-  height: 20em;
+  height: 80vh;
 }
 
 .wrapper {
   width: 100%;
-  height: 150%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -21,29 +21,35 @@
 
 .logo {
   display: flex;
-  width: 15%;
+  justify-content: center;
+  flex-basis: 20%;
 }
+
 .logo img {
-  transform: translate(-40%, 5%);
   height: 40%;
+  border-radius: 0%;
 }
 
 .shortLinksWrapper {
-  width: 70%;
   display: flex;
+  flex-basis: 80%;
   justify-content: space-evenly;
 }
+
 .quickLinks {
   text-transform: capitalize;
   font-size: 12px;
-  flex: 0.4;
+  flex-basis: 23%;
 }
+
 .quickLinks h3 {
   color: #fff;
 }
+
 .listWrapper {
   transform: translateY(20%);
 }
+
 .list {
   list-style: none;
 }
@@ -60,7 +66,8 @@
 .openingHours {
   text-transform: capitalize;
   font-size: 12px;
-  flex: 0.4;
+  flex-basis: 23%;
+  background: #000;
 }
 .openingHours h3 {
   color: #fff;
@@ -71,27 +78,33 @@
   color: #fff;
   line-height: 1.7;
 }
+
 .openingHourDetail span {
   font-weight: bold;
 }
+
 .openingHourDetail p {
   font-weight: lighter;
 }
+
 .contactInfo {
   text-transform: capitalize;
   font-size: 12px;
-  flex: 0.4;
+  flex-basis: 23%;
 }
+
 .contactInfo h3 {
   color: #fff;
   align-self: flex-start;
 }
+
 .contactInfoDetail {
   transform: translateY(25%);
   display: grid;
   grid-gap: 20px;
   color: #fff;
 }
+
 .contactInfoDetail address,
 p {
   line-height: 1.5;
@@ -102,8 +115,8 @@ p {
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
-  flex: 0.4;
   font-size: 12px;
+  flex-basis: 23%;
 }
 
 .subscribe h3 {
@@ -118,15 +131,17 @@ p {
 }
 
 .formWrapper {
-  flex: 0.4;
+  flex-basis: 30%;
 }
+
 .form {
   display: flex;
+  justify-content: flex-start;
 }
 
 .input {
   height: 3em;
-  width: 13em;
+  width: 15vw;
   padding: 10px;
   border-radius: 5px;
   outline: none;
@@ -134,7 +149,7 @@ p {
 
 .button {
   height: 3em;
-  width: 5em;
+  width: 5vw;
   border-color: #ff0000;
   font-size: 13px;
 }
