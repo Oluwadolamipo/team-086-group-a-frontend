@@ -10,6 +10,7 @@ import Footer from "../../Common/Footer.component/Footer.jsx";
 import Style from "../../Styles/contact.module.css";
 import MapContainer from "../../Components/MapComponent/Map";
 import Button from "../../Common/Button.component/Button";
+import CustomInput from "../../Common/Input.component/Input";
 
 
 
@@ -18,10 +19,10 @@ class ContactPage extends React.Component {
         super(props);
 
         this.state = {
-            name: " ",
-            email: " ",
-            subject: " ",
-            message: " ",
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
             disabled: false,
             messageSent : null,
 
@@ -126,10 +127,11 @@ class ContactPage extends React.Component {
 
                         
                         <Col md="5" sm="12" xs="12" className={Style.formGroup} >
+
                             <Form id="form" className={Style.formOrder} onSubmit={this.handleSubmit}>
                                 <Form.Group as = {Row}>
                                     <Col sm="10" md="10">
-                                        <Form.Control id="fullName" name="name" type="text" placeholder="Name" value={this.state.name} onChange={this.handleChange}/>
+                                        <Form.Control id="fullName" name="name" type="text" placeholder="Name" value={this.state.name} onChange={this.handleChange} />
                                     </Col>
                                 </Form.Group>
                                 <Form.Group as = {Row}>
