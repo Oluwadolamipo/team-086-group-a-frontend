@@ -15,6 +15,7 @@ const Illustration_Section = () => {
     title,
     option,
     search,
+    iconWrapper,
     icon,
     select,
     pay,
@@ -27,19 +28,27 @@ const Illustration_Section = () => {
       </div>
       <div className={option}>
         <div className={search}>
-          <FontAwesomeIcon icon={faSearch} className={icon} size="3x" />
+          <div className={iconWrapper}>
+            <FontAwesomeIcon icon={faSearch} className={icon} size="2x" />
+          </div>
           <span>search</span>
         </div>
         <div className={select}>
-          <FontAwesomeIcon icon={faShoppingCart} className={icon} size="3x" />
+          <div className={iconWrapper}>
+            <FontAwesomeIcon icon={faShoppingCart} className={icon} size="2x" />
+          </div>
           <span>select</span>
         </div>
         <div className={pay}>
-          <FontAwesomeIcon icon={faPaypal} className={icon} size="3x" />
+          <div className={iconWrapper}>
+            <FontAwesomeIcon icon={faPaypal} className={icon} size="2x" />
+          </div>
           <span>pay</span>
         </div>
         <div className={delivery}>
-          <FontAwesomeIcon icon={faBiking} className={icon} size="3x" />
+          <div className={iconWrapper}>
+            <FontAwesomeIcon icon={faBiking} className={icon} size="2x" />
+          </div>
           <span>delivery</span>
         </div>
       </div>
