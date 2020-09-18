@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import CustomImage from "../Image.component/Image";
 import CustomNavLinks from "../NavLink.component/NavLink";
 import CustomButton from "../Button.component/Button";
-import Image from "../../Asset/logo.png";
+import LogoImage from "../../Asset/android-chrome-192x192.png";
 
 import { HeaderNavLinksCollections } from "../../Utils/NavLinksCollections";
 import HeaderStyles from "../Header.Component/Header.module.css";
@@ -29,7 +29,7 @@ const Header = ({ history }) => {
     <div className={container}>
       <div className={headerBackground}>
         <div className={logo}>
-          <CustomImage src={Image} ait={"logo icon"} className={image} />
+          <CustomImage src={LogoImage} ait={"logo icon"} className={image} />
         </div>
         <div className={navWrapper}>
           <div className={navBars}>

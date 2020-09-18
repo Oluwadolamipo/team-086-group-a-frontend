@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import CustomList from "../List.component/List";
 import FooterStyles from "./Footer.module.css";
 import { FooterQuickLinksCollections } from "../../Utils/QuickLinks_collection";
-import logoImage from "../../Asset/logo.png";
+import logoImage from "../../Asset/android-chrome-192x192.png";
 import CustomImage from "../Image.component/Image";
 import CustomInput from "../Input.component/Input";
 import CustomButton from "..//Button.component/Button";
