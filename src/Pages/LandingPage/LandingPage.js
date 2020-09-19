@@ -8,6 +8,7 @@ import SpecialOffer from "../../Components/LandingPage/SpecialOffer.jsx";
 import ThreeDots from "../../Components/LandingPage/ThreeDots.jsx";
 import Menus from "../../Components/LandingPage/MenuSection.jsx";
 import Testimonials from "../../Components/LandingPage/Testimonials";
+import VendorsLogo from "../../Components/LandingPage/VendorsLogos";
 import Footer from "../../Common/Footer.component/Footer";
 import CustomInput from "../../Common/Input.component/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -40,7 +41,9 @@ const LandingPage = () => {
         <div className={emphasis}>
           <div className={textWrapper}>
             <div className={text}>
-              <p>sit, work and eat</p>
+              <p>
+                sit, work and <span>eat</span>
+              </p>
             </div>
           </div>
           <div className={search}>
@@ -62,6 +65,7 @@ const LandingPage = () => {
         <ThreeDots />
         <Menus />
         <Testimonials />
+        <VendorsLogo />
       </div>
       <Footer />
     </div>

@@ -20,7 +20,6 @@ const Testimonials = () => {
     pix,
     testifierDesc,
   } = TestimonailsStyles;
-  console.log(testimonials);
 
   return (
     <section className={section}>
@@ -33,8 +32,8 @@ const Testimonials = () => {
       <div className={testimony}>
         {testimonials &&
           testimonials.map(({ text, image, name, job, _id }) => (
-            <div className={testimonyContainer}>
-              <div key={_id} className={testimonyWrapper}>
+            <div className={testimonyContainer} key={_id}>
+              <div className={testimonyWrapper}>
                 <div className={texts}>
                   <p>{text}</p>
                 </div>
