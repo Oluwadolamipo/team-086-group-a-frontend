@@ -43,6 +43,7 @@
   height: 25em;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .testimonyWrapper {
@@ -54,6 +55,11 @@
   align-items: center;
   justify-content: center;
   filter: drop-shadow(10px 10px 30px #ccc);
+  transition: transform 2s ease-in;
+}
+
+.testimonyWrapper:hover {
+  transform: translateX(11%);
 }
 
 .texts {

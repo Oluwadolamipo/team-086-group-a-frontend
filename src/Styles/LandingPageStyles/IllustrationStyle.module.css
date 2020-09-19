@@ -31,21 +31,44 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  cursor: pointer;
 }
+
+.search:hover {
+  color: #ff0000;
+}
+
 .select {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  cursor: pointer;
 }
+
+.select:hover {
+  color: #ff0000;
+}
+
 .pay {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  cursor: pointer;
 }
+
+.pay:hover {
+  color: #ff0000;
+}
+
 .delivery {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  cursor: pointer;
+}
+
+.delivery:hover {
+  color: #ff0000;
 }
 
 .iconWrapper {

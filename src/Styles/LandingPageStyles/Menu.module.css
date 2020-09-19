@@ -47,7 +47,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgb(249, 96, 88);
+
+  transition: width 2s ease;
+}
+
+.contentWrapper:hover {
+  width: 35%;
 }
 
 .imgField {
@@ -75,6 +80,7 @@
   border: 0%;
   position: relative;
   transform: translateY(15px);
+  cursor: pointer;
 }
 
 .img img {
