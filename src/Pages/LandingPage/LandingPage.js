@@ -7,6 +7,7 @@ import IllustrationSection from "../../Components/LandingPage/Illustration_Secti
 import SpecialOffer from "../../Components/LandingPage/SpecialOffer.jsx";
 import ThreeDots from "../../Components/LandingPage/ThreeDots.jsx";
 import Menus from "../../Components/LandingPage/MenuSection.jsx";
+import Testimonials from "../../Components/LandingPage/Testimonials";
 import Footer from "../../Common/Footer.component/Footer";
 import CustomInput from "../../Common/Input.component/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -24,8 +25,8 @@ const LandingPage = () => {
     searchIcon,
     input,
   } = LandingPageStyles;
-  const [datas, setDatas] = useContext(NonRegisterContextMembers);
-  const { collection, searchData } = datas;
+  const [datas] = useContext(NonRegisterContextMembers);
+  const { searchData } = datas;
 
   const handleChange = ({ target }) => {
     console.log("target.value", target.value);
@@ -60,6 +61,7 @@ const LandingPage = () => {
         <SpecialOffer />
         <ThreeDots />
         <Menus />
+        <Testimonials />
       </div>
       <Footer />
     </div>

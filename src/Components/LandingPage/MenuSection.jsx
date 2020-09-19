@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { NonRegisterContextMembers } from "../../Context/NonRegisteredMemberContext";
 import CustomImage from "../../Common/Image.component/Image.jsx";
 import MenuStyles from "../../Styles/LandingPageStyles/Menu.module.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const SpecialOffer = () => {
   const [state] = useContext(NonRegisterContextMembers);
   const { collection } = state;
@@ -20,6 +21,8 @@ const SpecialOffer = () => {
     subCat,
     img,
     itemCaption,
+    more,
+    moreWrapper,
   } = MenuStyles;
 
   return (
@@ -48,6 +51,12 @@ const SpecialOffer = () => {
               </figcaption>
             </div>
           ))}
+      </div>
+      <div className={more}>
+        <div className={moreWrapper}>
+          <span>more</span>
+          <FontAwesomeIcon icon={faArrowRight} />
+        </div>
       </div>
     </section>
   );

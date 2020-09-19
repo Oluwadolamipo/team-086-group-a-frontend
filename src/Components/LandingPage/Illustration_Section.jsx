@@ -7,7 +7,7 @@ import {
   faBiking,
 } from "@fortawesome/free-solid-svg-icons";
 import IllustrationStyle from "../../Styles/LandingPageStyles/IllustrationStyle.module.css";
-import { faPaypal, faDelicious } from "@fortawesome/free-brands-svg-icons";
+import { faPaypal } from "@fortawesome/free-brands-svg-icons";
 
 const Illustration_Section = () => {
   const {

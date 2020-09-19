@@ -1,6 +1,6 @@
 .allContainer {
   width: 100%;
-  height: 240em;
+  max-height: 300em;
 }
 .topArea {
   background-image: linear-gradient(rgba(0, 00, 0, 0.2), rgba(0, 0, 0, 0.2)),
