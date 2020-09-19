@@ -20,9 +20,21 @@ const NonRegisteredMemberContextProvider = (props) => {
     },
     collection: {
       specialOffers: [
-        { image: Bugger, name: "bugger", price: 60 },
-        { image: Ellipse, name: "american buggar", price: 60 },
-        { image: Bugger, name: "", price: 60 },
+        {
+          image: Ellipse,
+          name: "american bugger",
+          price: 60,
+          discount: 50,
+          _id: 1,
+        },
+        {
+          image: Bugger,
+          name: "buggar",
+          price: 60,
+          discount: 50,
+          _id: 2,
+        },
+        { image: Bugger, name: "bugger", price: 60, discount: 50, _id: 3 },
       ],
       menu: [
         { image: Soup, name: "shrimp with garlic", price: 60 },

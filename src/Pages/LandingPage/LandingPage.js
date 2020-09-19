@@ -3,6 +3,7 @@ import { NonRegisterContextMembers } from "../../Context/NonRegisteredMemberCont
 import VendorBar from "../../Components/LandingPage/Vendor_SignUp_Bar.jsx";
 import AboutSession from "../../Components/LandingPage/AboutSection";
 import IllustrationSection from "../../Components/LandingPage/Illustration_Section.jsx";
+import SpecialOffer from "../../Components/LandingPage/SpecialOffer.jsx";
 import LandingPageStyles from "../../Styles/LandingPageStyles/parentStyle.module.css";
 import Header from "../../Common/Header.Component/Header";
 import Footer from "../../Common/Footer.component/Footer";
@@ -53,6 +54,7 @@ const LandingPage = () => {
       <div>
         <AboutSession />
         <IllustrationSection />
+        <SpecialOffer />
       </div>
       <div>{searchData ? searchData : "waiting"}</div>
       <Footer />
