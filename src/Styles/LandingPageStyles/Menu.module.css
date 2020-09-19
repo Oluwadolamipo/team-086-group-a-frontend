@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  height: 40em;
+  height: 50em;
 }
 
 .CategoryWrapper {
@@ -11,30 +11,30 @@
   width: 30%;
   display: flex;
   justify-content: flex-start;
+  align-items: flex-end;
+
   transform: translateX(10%);
 }
-
 .tag {
   width: 5%;
   height: 4em;
-  background-color: red;
+  background-color: #5adaf7;
 }
 
 .cat {
-  width: 100%;
-  height: inherit;
   display: flex;
+  height: inherit;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
 }
-
 .cat h2 {
   font-size: 30pt;
   text-transform: uppercase;
-  padding-left: 7%;
+  margin-left: 7%;
 }
 
-.specialOffersWrapper {
+.menuWrapper {
   height: 30em;
   display: flex;
   justify-content: space-evenly;
@@ -43,46 +43,43 @@
 .contentWrapper {
   background-color: #f8f8fc;
   width: 30%;
-  height: 30em;
+  height: 40em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(249, 96, 88);
 }
 
 .imgField {
-  width: 80%;
-  height: 20em;
-  margin-top: 30px;
+  width: 100%;
+  height: 24em;
   border: 2px solid #eee;
 }
 
+.subCategory {
+  width: 100%;
+  height: 6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8e6e9;
+}
+
+.subCat {
+  font-weight: normal;
+  font-size: 18pt;
+  text-transform: uppercase;
+}
 .img {
   width: 100%;
   border: 0%;
   position: relative;
+  transform: translateY(15px);
 }
 
 .img img {
   width: 100%;
   height: 20em;
-}
-
-.discounts {
-  width: 4%;
-  height: 3em;
-  background-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translate(450%, -120%);
-  border-radius: 50%;
-  position: absolute;
-  z-index: 3;
-}
-
-.discounts span {
-  color: #fff;
 }
 
 .itemCaption {
@@ -92,6 +89,7 @@
   height: 7em;
   align-items: center;
   justify-content: space-evenly;
+  transform: translateY(90%);
 }
 
 .itemCaption h3 {

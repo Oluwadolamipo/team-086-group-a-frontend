@@ -34,12 +34,36 @@ const NonRegisteredMemberContextProvider = (props) => {
           discount: 50,
           _id: 2,
         },
-        { image: Bugger, name: "bugger", price: 60, discount: 50, _id: 3 },
+        {
+          image: Bugger,
+          name: "bugger",
+          price: 60,
+          discount: 50,
+          _id: 3,
+        },
       ],
-      menu: [
-        { image: Soup, name: "shrimp with garlic", price: 60 },
-        { image: Plantain, name: "plantain", price: 60 },
-        { image: Soup, name: "shrimp with garlic", price: 60 },
+      menus: [
+        {
+          category: "meat & seafood",
+          image: Soup,
+          name: "shrimp with garlic",
+          price: 60,
+          _id: 1,
+        },
+        {
+          category: "native",
+          image: Plantain,
+          name: "plantain",
+          price: 60,
+          _id: 2,
+        },
+        {
+          category: "drinks",
+          image: Juice,
+          name: "mangoL the golden fruit",
+          price: 60,
+          _id: 3,
+        },
       ],
       testimonials: [
         {
@@ -48,6 +72,7 @@ const NonRegisteredMemberContextProvider = (props) => {
           image: ManImag,
           name: "ralph belloa",
           job: "c.e.o mvstri & co",
+          _id: 1,
         },
         {
           text:
@@ -55,8 +80,10 @@ const NonRegisteredMemberContextProvider = (props) => {
           image: ManImag,
           name: "ralph belloa",
           job: "c.e.o mvstri & co",
+          _id: 2,
         },
       ],
+
       vendorsIcon: [Plantain, Juice, Soup, Ellipse, ManImag, Juice],
       blogs: [
         { image: Plantain, info: "best plaintain combinations" },

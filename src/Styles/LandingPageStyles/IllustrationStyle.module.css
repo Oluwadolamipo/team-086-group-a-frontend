@@ -30,8 +30,7 @@
 .search {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  font-size: 20px;
+  justify-content: space-around;
 }
 .select {
   display: flex;

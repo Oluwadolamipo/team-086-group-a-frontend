@@ -1,18 +1,21 @@
 import React, { useContext } from "react";
 import { NonRegisterContextMembers } from "../../Context/NonRegisteredMemberContext";
+import Header from "../../Common/Header.Component/Header";
 import VendorBar from "../../Components/LandingPage/Vendor_SignUp_Bar.jsx";
-import AboutSession from "../../Components/LandingPage/AboutSection";
+import AboutSection from "../../Components/LandingPage/AboutSection";
 import IllustrationSection from "../../Components/LandingPage/Illustration_Section.jsx";
 import SpecialOffer from "../../Components/LandingPage/SpecialOffer.jsx";
-import LandingPageStyles from "../../Styles/LandingPageStyles/parentStyle.module.css";
-import Header from "../../Common/Header.Component/Header";
+import ThreeDots from "../../Components/LandingPage/ThreeDots.jsx";
+import Menus from "../../Components/LandingPage/MenuSection.jsx";
 import Footer from "../../Common/Footer.component/Footer";
 import CustomInput from "../../Common/Input.component/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import LandingPageStyles from "../../Styles/LandingPageStyles/parentStyle.module.css";
 
 const LandingPage = () => {
   const {
+    allContainer,
     topArea,
     emphasis,
     textWrapper,
@@ -22,14 +25,14 @@ const LandingPage = () => {
     input,
   } = LandingPageStyles;
   const [datas, setDatas] = useContext(NonRegisterContextMembers);
-  const { collction, searchData } = datas;
+  const { collection, searchData } = datas;
 
   const handleChange = ({ target }) => {
     console.log("target.value", target.value);
   };
 
   return (
-    <div>
+    <div className={allContainer}>
       <div className={topArea}>
         <Header />
         <VendorBar />
@@ -52,11 +55,12 @@ const LandingPage = () => {
         </div>
       </div>
       <div>
-        <AboutSession />
+        <AboutSection />
         <IllustrationSection />
         <SpecialOffer />
+        <ThreeDots />
+        <Menus />
       </div>
-      <div>{searchData ? searchData : "waiting"}</div>
       <Footer />
     </div>
   );
