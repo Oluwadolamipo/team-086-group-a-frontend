@@ -60,7 +60,7 @@ const NonRegisteredMemberContextProvider = (props) => {
         {
           category: "drinks",
           image: Juice,
-          name: "mangoL the golden fruit",
+          name: "mango the golden fruit",
           price: 60,
           _id: 3,
         },
@@ -85,10 +85,11 @@ const NonRegisteredMemberContextProvider = (props) => {
       ],
 
       vendorsIcon: [Plantain, Juice, Soup, Ellipse, ManImag, Juice],
+
       blogs: [
-        { image: Plantain, info: "best plaintain combinations" },
-        { image: ManImag, info: "top 5 resturants in lagos" },
-        { image: Juice, info: "mango: the golden fruit" },
+        { image: Plantain, info: "best plaintain combinations", _id: 1 },
+        { image: ManImag, info: "top 5 resturants in lagos", _id: 2 },
+        { image: Juice, info: "mango: the golden fruit", id: 3 },
       ],
     },
   });

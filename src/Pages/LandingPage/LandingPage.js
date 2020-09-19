@@ -9,11 +9,12 @@ import ThreeDots from "../../Components/LandingPage/ThreeDots.jsx";
 import Menus from "../../Components/LandingPage/MenuSection.jsx";
 import Testimonials from "../../Components/LandingPage/Testimonials";
 import VendorsLogo from "../../Components/LandingPage/VendorsLogos";
+import Blogs from "../../Components/LandingPage/Blog.jsx";
 import Footer from "../../Common/Footer.component/Footer";
 import CustomInput from "../../Common/Input.component/Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import LandingPageStyles from "../../Styles/LandingPageStyles/parentStyle.module.css";
+import LandingPageStyles from "../../Styles/LandingPageStyles/LandingPage.module.css";
 
 const LandingPage = () => {
   const {
@@ -66,6 +67,7 @@ const LandingPage = () => {
         <Menus />
         <Testimonials />
         <VendorsLogo />
+        <Blogs />
       </div>
       <Footer />
     </div>
