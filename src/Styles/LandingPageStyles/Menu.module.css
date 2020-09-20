@@ -106,6 +106,7 @@
   position: relative;
   top: -6%;
   background-color: blue;
+  cursor: pointer;
 }
 
 .moreWrapper {

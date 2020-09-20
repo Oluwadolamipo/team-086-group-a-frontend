@@ -2,23 +2,21 @@
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
-  text-rendering: auto;
   image-rendering: optimizeQuality;
 }
 
 .container {
   width: 100%;
-  height: 15vh;
-  position: relative;
+  height: 7em;
 }
 
 .headerBackground {
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: rgba(0, 0, 0, 0.75);
+  height: 7em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   animation: fade 3s ease-in;
 }
 
@@ -35,9 +33,7 @@
 }
 .logo {
   height: inherit;
-  flex-basis: 20%;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -54,27 +50,37 @@
 }
 
 .navBars {
+  width: 60%;
   height: inherit;
-  flex-basis: 60%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.navBars li {
+  list-style: none;
+}
+
+.navBars li :hover {
+  color: red;
+  /* font-weight: lighter; */
 }
 
 .links {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bolder;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .links:hover {
-  font-weight: lighter;
+  padding-bottom: 10px;
+  border-bottom: 2px solid red;
 }
 
 .buttonWrapper {
   display: flex;
-  height: 8vh;
-  flex-basis: 30%;
   justify-content: flex-start;
 }
 .button {

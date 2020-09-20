@@ -4,7 +4,7 @@ import CustomImage from "../Image.component/Image";
 import CustomNavLinks from "../NavLink.component/NavLink";
 import CustomButton from "../Button.component/Button";
 import LogoImage from "../../Asset/android-chrome-192x192.png";
-
+import CustomList from "../../Common/List.component/List";
 import { HeaderNavLinksCollections } from "../../Utils/NavLinksCollections";
 import HeaderStyles from "../Header.Component/Header.module.css";
 const Header = ({ history }) => {
@@ -35,11 +35,15 @@ const Header = ({ history }) => {
           <div className={navBars}>
             {HeaderNavLinksCollections &&
               HeaderNavLinksCollections.map((navlinks, index) => (
-                <CustomNavLinks
-                  url={`/team-086-group-a-frontend/${navlinks}`}
-                  text={navlinks}
+                <CustomList
                   key={index}
-                  className={links}
+                  text={
+                    <CustomNavLinks
+                      url={`/team-086-group-a-frontend/${navlinks}`}
+                      text={navlinks}
+                      className={links}
+                    />
+                  }
                 />
               ))}
           </div>
