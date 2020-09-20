@@ -61,11 +61,6 @@
   list-style: none;
 }
 
-.navBars li :hover {
-  color: red;
-  /* font-weight: lighter; */
-}
-
 .links {
   text-transform: uppercase;
   font-size: 12px;
@@ -77,12 +72,14 @@
 .links:hover {
   padding-bottom: 10px;
   border-bottom: 2px solid red;
+  font-weight: lighter;
 }
 
 .buttonWrapper {
   display: flex;
   justify-content: flex-start;
 }
+
 .button {
   height: 8vh;
   border-color: #000;
