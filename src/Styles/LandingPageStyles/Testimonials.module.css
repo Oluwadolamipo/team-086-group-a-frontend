@@ -5,29 +5,36 @@
   flex-direction: column;
 }
 
-.titleWrapper {
-  width: 30%;
+.CategoryWrapper {
   height: 6em;
+}
+
+.CategoryName {
+  width: 30%;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   transform: translateX(10%);
 }
 
 .tag {
-  width: 4%;
+  width: 5%;
   height: 4em;
-  background-color: #ff0000;
+  background-color: #5adaf7;
 }
 
-.title {
-  width: 100%;
+.cat {
   display: flex;
+  height: inherit;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
 }
 
-.title h2 {
-  font-size: 30pt;
+.cat h2 {
+  font-size: 27pt;
   text-transform: uppercase;
-  margin-left: 7%;
+  transform: translateX(7%);
 }
 
 .testimony {
@@ -39,16 +46,17 @@
 }
 
 .testimonyContainer {
-  width: 40%;
+  flex-basis: 40%;
   height: 25em;
   display: flex;
   justify-content: center;
   cursor: pointer;
+  flex-wrap: wrap;
 }
 
 .testimonyWrapper {
   width: 90%;
-  height: 28em;
+  height: inherit;
   background-color: #fff;
   display: flex;
   flex-direction: column;

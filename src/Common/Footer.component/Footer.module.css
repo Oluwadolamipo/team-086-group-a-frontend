@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   height: 20em;
+  flex-wrap: wrap;
 }
 
 .wrapper {
@@ -10,6 +11,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   background-color: #000;
+  flex-wrap: wrap;
 }
 
 .contentWrapper {
@@ -17,12 +19,14 @@
   height: 60%;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .logo {
   display: flex;
   width: 15%;
 }
+
 .logo img {
   transform: translate(-40%, 5%);
   height: 40%;
@@ -32,18 +36,23 @@
   width: 70%;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
+
 .quickLinks {
   text-transform: capitalize;
   font-size: 12px;
   flex: 0.4;
 }
+
 .quickLinks h3 {
   color: #fff;
 }
+
 .listWrapper {
   transform: translateY(20%);
 }
+
 .list {
   list-style: none;
 }
@@ -58,7 +67,9 @@
   text-transform: capitalize;
   font-size: 12px;
   flex: 0.4;
+  flex-wrap: wrap;
 }
+
 .openingHours h3 {
   color: #fff;
 }
@@ -68,27 +79,34 @@
   color: #fff;
   line-height: 1.7;
 }
+
 .openingHourDetail span {
   font-weight: bold;
 }
+
 .openingHourDetail p {
   font-weight: lighter;
 }
+
 .contactInfo {
   text-transform: capitalize;
   font-size: 12px;
   flex: 0.4;
+  flex-wrap: wrap;
 }
+
 .contactInfo h3 {
   color: #fff;
   align-self: flex-start;
 }
+
 .contactInfoDetail {
   transform: translateY(25%);
   display: grid;
   grid-gap: 20px;
   color: #fff;
 }
+
 .contactInfoDetail address,
 p {
   line-height: 1.5;
@@ -101,12 +119,14 @@ p {
   text-transform: capitalize;
   flex: 0.4;
   font-size: 12px;
+  flex-wrap: wrap;
 }
 
 .subscribe h3 {
   align-self: flex-start;
   color: #fff;
 }
+
 .subscribeEvents {
   height: 16.6em;
   display: flex;
@@ -117,8 +137,10 @@ p {
 .formWrapper {
   flex: 0.4;
 }
+
 .form {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .input {
@@ -147,9 +169,11 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .copyright {
   flex-basis: 20%;
+  flex-wrap: wrap;
 }
 
 .copyright span {
@@ -162,12 +186,14 @@ p {
   display: flex;
   justify-content: space-evenly;
   flex-basis: 20%;
+  flex-wrap: wrap;
 }
 
 .hints {
   display: flex;
   justify-content: space-evenly;
   flex-basis: 30%;
+  flex-wrap: wrap;
 }
 
 .hints span {
