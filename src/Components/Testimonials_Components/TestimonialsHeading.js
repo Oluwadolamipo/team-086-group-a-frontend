@@ -1,11 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 export default class TestimonialsHeading extends React.Component {
   render() {
-    return (
-      <Heading1>TESTIMONIALS</Heading1>
-    );
+    return <Heading1>TESTIMONIALS</Heading1>;
   }
 }
 const Heading1 = styled.h1`
