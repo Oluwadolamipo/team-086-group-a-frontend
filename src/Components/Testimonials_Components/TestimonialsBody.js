@@ -13,7 +13,7 @@ export default class TestimonialsBody extends React.Component {
     );
   }
 }
-const BodyStyle = styled.h1`
+const BodyStyle = styled.div`
   text-align: center;
 `;
 //#f96058
