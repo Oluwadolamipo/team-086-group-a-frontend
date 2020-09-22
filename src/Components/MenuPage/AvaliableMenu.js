@@ -15,7 +15,6 @@ const AvaliableMenu = ({ match }) => {
     container,
     wrapper,
     sectionOne,
-    sectionTwo,
     aside,
     asideOne,
     asideTwo,
@@ -173,7 +172,7 @@ const AvaliableMenu = ({ match }) => {
           </div>
         </div>
 
-        {/* <div className={sectionTwo}>
+        {/* <div className={section
           <aside className={aside}>
             <div className={avMenu}>
               <h3>filters</h3>
